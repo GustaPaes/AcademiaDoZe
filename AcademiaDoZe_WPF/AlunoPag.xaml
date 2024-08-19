@@ -1,0 +1,46 @@
+﻿<Page x:Class="AcademiaDoZe_WPF.AlunoPag"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+      mc:Ignorable="d" 
+      Title="AlunoPag" Height="578" Width="1006">
+
+    <Grid Background="#FF909090">
+        <Label x:Name="IdendAlu" Content="ID:" HorizontalAlignment="Left" Margin="140,263,0,0" VerticalAlignment="Top" Height="32" Width="29"/>
+        <TextBox x:Name="textIdendAlu" HorizontalAlignment="Left" Margin="140,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
+        <Label x:Name="cepAlu" Content="CEP:" HorizontalAlignment="Left" Margin="311,263,0,0" VerticalAlignment="Top" Height="32" Width="40"/>
+        <TextBox x:Name="TextCepAlu" HorizontalAlignment="Left" Margin="315,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <Label x:Name="logradouroAlu" Content="Logradouro:" HorizontalAlignment="Left" Margin="589,263,0,0" VerticalAlignment="Top" Height="32" Width="91"/>
+        <TextBox x:Name="textLogradouroAlu" HorizontalAlignment="Left" Margin="593,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="23"/>
+        <Label x:Name="bairroAlu" Content="Bairro:" HorizontalAlignment="Left" Margin="137,326,0,0" VerticalAlignment="Top" Height="32" Width="53"/>
+        <TextBox x:Name="textBairroAlu" HorizontalAlignment="Left" Margin="140,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Height="23"/>
+        <Label x:Name="h1Alu" Content="Aluno:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="cidadeAlu" Content="Cidade:" HorizontalAlignment="Left" Margin="513,326,0,0" VerticalAlignment="Top" Height="32" Width="60"/>
+        <Label x:Name="ufAlu" Content="UF:" HorizontalAlignment="Left" Margin="138,390,0,0" VerticalAlignment="Top" Height="32" Width="33"/>
+        <Label x:Name="paisAlu" Content="País:" HorizontalAlignment="Left" Margin="329,390,0,0" VerticalAlignment="Top" Height="32" Width="39"/>
+        <ComboBox x:Name="textCidadeAlu" HorizontalAlignment="Left" Margin="519,353,0,0" VerticalAlignment="Top" Width="430" Height="23"/>
+        <ComboBox x:Name="textPaisAlu" HorizontalAlignment="Left" Margin="329,422,0,0" VerticalAlignment="Top" Width="618" Height="24"/>
+        <ComboBox x:Name="textUfAlu" HorizontalAlignment="Left" Margin="140,422,0,0" VerticalAlignment="Top" Width="156" Height="24"/>
+        <Button x:Name="salvarAlu" Content="Salvar" HorizontalAlignment="Left" Margin="768,459,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarLog_Click"/>
+        <Label x:Name="numeroAlu" Content="Número:" HorizontalAlignment="Left" Margin="143,451,0,0" VerticalAlignment="Top" Height="32" Width="78"/>
+        <TextBox x:Name="textNumAlu" HorizontalAlignment="Left" Margin="145,478,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
+        <Label x:Name="compAlu" Content="Complemento:" HorizontalAlignment="Left" Margin="311,451,0,0" VerticalAlignment="Top" Height="32" Width="104"/>
+        <TextBox x:Name="TextcompAlu" HorizontalAlignment="Left" Margin="315,478,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <Label x:Name="IdAlu" Content="ID:" HorizontalAlignment="Left" Margin="139,82,0,0" VerticalAlignment="Top" Height="32" Width="29"/>
+        <TextBox x:Name="textIdAlu" HorizontalAlignment="Left" Margin="139,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="22"/>
+        <Label x:Name="CPFAlu" Content="CPF:" HorizontalAlignment="Left" Margin="315,82,0,0" VerticalAlignment="Top" Height="32" Width="40"/>
+        <TextBox x:Name="TextCpfAlu" HorizontalAlignment="Left" Margin="319,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="22"/>
+        <Label x:Name="TelefoneAlu" Content="Telefone:" HorizontalAlignment="Left" Margin="588,82,0,0" VerticalAlignment="Top" Height="32" Width="91"/>
+        <TextBox x:Name="textFoneAlu" HorizontalAlignment="Left" Margin="592,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="22"/>
+        <Label x:Name="NomeAlu" Content="Nome:" HorizontalAlignment="Left" Margin="136,136,0,0" VerticalAlignment="Top" Height="32" Width="53"/>
+        <TextBox x:Name="textNomeAlu" HorizontalAlignment="Left" Margin="139,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="807" Height="22"/>
+        <Label x:Name="nascimentoAlu" Content="Data de nascimento:" HorizontalAlignment="Left" Margin="139,206,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="EmailAlu" Content="Email:" HorizontalAlignment="Left" Margin="348,206,0,0" VerticalAlignment="Top" Height="32" Width="56"/>
+        <TextBox x:Name="textEmailAlu" HorizontalAlignment="Left" Margin="348,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="598" Height="22" RenderTransformOrigin="0.5,0.5"/>
+
+        <DatePicker x:Name="textNascAlu" HorizontalAlignment="Left" Margin="139,232,0,0" VerticalAlignment="Top" Width="164"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="AcademiaDoZe_WPF.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+        mc:Ignorable="d"
+        Title="Home" Height="720" Width="1280">
+    <Grid>
+        <Button x:Name="LOGOUT" Content="Logout" HorizontalAlignment="Left" Margin="1116,618,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="LOGOUT_Click"/>
+        <Button x:Name="Matriculabtn" Content="Matrícula" HorizontalAlignment="Left" Margin="1118,232,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Matriculabtn_Click"/>
+        <Button x:Name="SenhaBtn" Content="Senha" HorizontalAlignment="Left" Margin="1118,188,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="SenhaBtn_Click"/>
+        <Button x:Name="AlunoBtn" Content="Aluno" HorizontalAlignment="Left" Margin="1118,101,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AlunoBtn_Click"/>
+        <Button x:Name="Logradourobtn" Content="Logradouro" HorizontalAlignment="Left" Margin="1118,58,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Logradourobtn_Click"/>
+        <Frame x:Name="mainFrame" Content="" Margin="0,0,195,0" Background="#FF909090"/>
+        <Button x:Name="FrequenciaBtn" Content="Frequência" HorizontalAlignment="Left" Margin="1119,318,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="FrequenciaBtn_Click"/>
+        <Button x:Name="treinosbtn" Content="Treinos" HorizontalAlignment="Left" Margin="1118,404,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
+        <Button x:Name="Aulasbtn" Content="Aulas" HorizontalAlignment="Left" Margin="1118,360,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
+        <Button x:Name="AvaliacaoBtn" Content="Avaliação" HorizontalAlignment="Left" Margin="1118,274,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AvaliacaoBtn_Click"/>
+        <Button x:Name="ColaboradorBtn" Content="Colaborador" HorizontalAlignment="Left" Margin="1118,144,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="ColaboradorBtn_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Page x:Class="AcademiaDoZe_WPF.LogradouroPag"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+      mc:Ignorable="d"
+      Title="LogradouroPag" Height="578" Width="1006">
+
+    <Grid Background="#FF909090">
+        <Label x:Name="IdLog" Content="ID:" HorizontalAlignment="Left" Margin="139,101,0,0" VerticalAlignment="Top" Height="32" Width="29"/>
+        <TextBox x:Name="textIdLog" HorizontalAlignment="Left" Margin="139,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
+        <Label x:Name="cepLog" Content="CEP:" HorizontalAlignment="Left" Margin="319,101,0,0" VerticalAlignment="Top" Height="32" Width="40"/>
+        <TextBox x:Name="TextCepLog" HorizontalAlignment="Left" Margin="323,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <Label x:Name="logradouroLog" Content="Logradouro:" HorizontalAlignment="Left" Margin="588,101,0,0" VerticalAlignment="Top" Height="32" Width="91"/>
+        <TextBox x:Name="textLogradouroLog" HorizontalAlignment="Left" Margin="592,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="23"/>
+        <Label x:Name="bairroLog" Content="Bairro:" HorizontalAlignment="Left" Margin="136,165,0,0" VerticalAlignment="Top" Height="32" Width="53"/>
+        <TextBox x:Name="textBairroLog" HorizontalAlignment="Left" Margin="139,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Height="23"/>
+        <Label x:Name="h1Log" Content="Logradouro:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="cidadeLog" Content="Cidade:" HorizontalAlignment="Left" Margin="512,165,0,0" VerticalAlignment="Top" Height="32" Width="60"/>
+        <Label x:Name="ufLog" Content="UF:" HorizontalAlignment="Left" Margin="137,233,0,0" VerticalAlignment="Top" Height="32" Width="33"/>
+        <Label x:Name="paisLog" Content="País:" HorizontalAlignment="Left" Margin="328,233,0,0" VerticalAlignment="Top" Height="32" Width="39"/>
+        <ComboBox x:Name="textCidadeLog" HorizontalAlignment="Left" Margin="518,192,0,0" VerticalAlignment="Top" Width="430" Height="23"/>
+        <ComboBox x:Name="textPaisLog" HorizontalAlignment="Left" Margin="328,265,0,0" VerticalAlignment="Top" Width="618" Height="24"/>
+        <ComboBox x:Name="textUfLog" HorizontalAlignment="Left" Margin="139,265,0,0" VerticalAlignment="Top" Width="156" Height="24"/>
+        <Button x:Name="salvarLog" Content="Salvar" HorizontalAlignment="Left" Margin="766,462,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarLog_Click"/>
+
+    </Grid>
+</Page>

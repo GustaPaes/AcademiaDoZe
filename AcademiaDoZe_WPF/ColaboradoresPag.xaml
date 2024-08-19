@@ -1,0 +1,57 @@
+﻿<Page x:Class="AcademiaDoZe_WPF.ColaboradoresPag"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+      mc:Ignorable="d" 
+      Title="ColaboradoresPag" Height="578" Width="1006">
+
+    <Grid Background="#FF909090">
+        <Label x:Name="IdendCol" Content="ID:" HorizontalAlignment="Left" Margin="11,296,0,0" VerticalAlignment="Top" Height="32" Width="29"/>
+        <TextBox x:Name="textIdEndCol" HorizontalAlignment="Left" Margin="11,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
+        <Label x:Name="cepCol" Content="CEP:" HorizontalAlignment="Left" Margin="182,296,0,0" VerticalAlignment="Top" Height="32" Width="40"/>
+        <TextBox x:Name="TextCepCol" HorizontalAlignment="Left" Margin="186,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <Label x:Name="logradouroCol" Content="Logradouro:" HorizontalAlignment="Left" Margin="460,296,0,0" VerticalAlignment="Top" Height="32" Width="91"/>
+        <TextBox x:Name="textLogradouroCol" HorizontalAlignment="Left" Margin="464,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Height="23"/>
+        <Label x:Name="bairroCol" Content="Bairro:" HorizontalAlignment="Left" Margin="8,359,0,0" VerticalAlignment="Top" Height="32" Width="53"/>
+        <TextBox x:Name="textBairroCol" HorizontalAlignment="Left" Margin="11,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Height="23"/>
+        <Label x:Name="h1Col" Content="Colaborador:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="cidadeCol" Content="Cidade:" HorizontalAlignment="Left" Margin="384,359,0,0" VerticalAlignment="Top" Height="32" Width="60"/>
+        <Label x:Name="ufCol" Content="UF:" HorizontalAlignment="Left" Margin="9,423,0,0" VerticalAlignment="Top" Height="32" Width="33"/>
+        <Label x:Name="paisCol" Content="País:" HorizontalAlignment="Left" Margin="200,423,0,0" VerticalAlignment="Top" Height="32" Width="39"/>
+        <ComboBox x:Name="textCidadeCol" HorizontalAlignment="Left" Margin="390,386,0,0" VerticalAlignment="Top" Width="379" Height="23"/>
+        <ComboBox x:Name="textPaisCol" HorizontalAlignment="Left" Margin="200,455,0,0" VerticalAlignment="Top" Width="569" Height="24"/>
+        <ComboBox x:Name="textUfCol" HorizontalAlignment="Left" Margin="11,455,0,0" VerticalAlignment="Top" Width="156" Height="24"/>
+        <Button x:Name="salvarCol" Content="Salvar" HorizontalAlignment="Left" Margin="807,386,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarLog_Click"/>
+        <Label x:Name="numeroCol" Content="Número:" HorizontalAlignment="Left" Margin="11,484,0,0" VerticalAlignment="Top" Height="32" Width="78"/>
+        <TextBox x:Name="textNumCol" HorizontalAlignment="Left" Margin="11,511,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
+        <Label x:Name="compCol" Content="Complemento:" HorizontalAlignment="Left" Margin="182,484,0,0" VerticalAlignment="Top" Height="32" Width="104"/>
+        <TextBox x:Name="TextcompCol" HorizontalAlignment="Left" Margin="186,511,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <Label x:Name="IdCol" Content="ID:" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="32" Width="29"/>
+        <TextBox x:Name="textIdCol" HorizontalAlignment="Left" Margin="10,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="22"/>
+        <Label x:Name="CPFCol" Content="CPF:" HorizontalAlignment="Left" Margin="181,115,0,0" VerticalAlignment="Top" Height="32" Width="40"/>
+        <TextBox x:Name="TextCpfCol" HorizontalAlignment="Left" Margin="185,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="22"/>
+        <Label x:Name="TelefoneAlu" Content="Telefone:" HorizontalAlignment="Left" Margin="459,115,0,0" VerticalAlignment="Top" Height="32" Width="91"/>
+        <TextBox x:Name="textFoneCol" HorizontalAlignment="Left" Margin="463,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" Height="22"/>
+        <Label x:Name="NomeCol" Content="Nome:" HorizontalAlignment="Left" Margin="7,169,0,0" VerticalAlignment="Top" Height="32" Width="53"/>
+        <TextBox x:Name="textNomeCol" HorizontalAlignment="Left" Margin="10,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="759" Height="22"/>
+        <Label x:Name="nascimentoCol" Content="Data de nascimento:" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="EmailCol" Content="Email:" HorizontalAlignment="Left" Margin="268,238,0,0" VerticalAlignment="Top" Height="32" Width="55"/>
+        <TextBox x:Name="textEmailCol" HorizontalAlignment="Left" Margin="268,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="503" Height="22" RenderTransformOrigin="0.5,0.5"/>
+        <DatePicker x:Name="textNascCol" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label x:Name="admissaoCol" Content="Admissão:" HorizontalAlignment="Left" Margin="807,117,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="textAdmissaoCol" HorizontalAlignment="Left" Margin="807,143,0,0" VerticalAlignment="Top" Width="164"/>
+        <StackPanel x:Name="StackpanelCol1" HorizontalAlignment="Left" Height="42" Margin="810,196,0,0" VerticalAlignment="Top" Width="164">
+            <RadioButton x:Name="CLTCol" Content="CLT" Height="24"/>
+            <RadioButton x:Name="EstagioCol" Content="Estágio" Height="18"/>
+        </StackPanel>
+        <StackPanel x:Name="StackpanelCol2" HorizontalAlignment="Left" Height="69" Margin="810,280,0,0" VerticalAlignment="Top" Width="164">
+            <RadioButton x:Name="AdmCol" Content="Administrador" Height="24"/>
+            <RadioButton x:Name="atenCol" Content="Atendente" Height="24"/>
+            <RadioButton x:Name="instCol" Content="Instrutor"/>
+        </StackPanel>
+        <Label x:Name="TelefoneAlu_Copiar" Content="Tipo de Cadastro" HorizontalAlignment="Left" Margin="810,248,0,0" VerticalAlignment="Top" Height="32" Width="110"/>
+
+    </Grid>
+</Page>
