@@ -65,5 +65,20 @@ namespace AcademiaDoZe_WPF
         {
             mainFrame.Navigate(new FrequenciaPag());
         }
+
+        private void ButtonPortuguese_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeLanguage("pt-BR");
+        }
+
+        private void ButtonEnglish_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeLanguage("en-US");
+        }
+
+        private void ButtonSpanish_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeLanguage("es-ES");
+        }
     }
 }

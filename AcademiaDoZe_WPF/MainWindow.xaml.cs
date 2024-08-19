@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,19 @@ namespace AcademiaDoZe_WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ChangeLanguage(string cultureCode)
+        {
+            CultureInfo culture = new CultureInfo(cultureCode);
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
+            
+            var oldWindow = this;
+            var newWindow = new MainWindow();
+            Application.Current.MainWindow = newWindow;
+            newWindow.Show();
+            oldWindow.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

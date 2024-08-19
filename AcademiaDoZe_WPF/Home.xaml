@@ -4,19 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+        xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
         mc:Ignorable="d"
         Title="Home" Height="720" Width="1280">
     <Grid>
-        <Button x:Name="LOGOUT" Content="Logout" HorizontalAlignment="Left" Margin="1116,618,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="LOGOUT_Click"/>
-        <Button x:Name="Matriculabtn" Content="Matrícula" HorizontalAlignment="Left" Margin="1118,232,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Matriculabtn_Click"/>
-        <Button x:Name="SenhaBtn" Content="Senha" HorizontalAlignment="Left" Margin="1118,188,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="SenhaBtn_Click"/>
-        <Button x:Name="AlunoBtn" Content="Aluno" HorizontalAlignment="Left" Margin="1118,101,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AlunoBtn_Click"/>
-        <Button x:Name="Logradourobtn" Content="Logradouro" HorizontalAlignment="Left" Margin="1118,58,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Logradourobtn_Click"/>
+        <Button x:Name="btnLogout" Content="{x:Static resources:Idioma.txtLogout}" HorizontalAlignment="Left" Margin="1116,618,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="LOGOUT_Click"/>
+        <Button x:Name="btnMatricula" Content="{x:Static resources:Idioma.txtMatricula}" HorizontalAlignment="Left" Margin="1118,232,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Matriculabtn_Click"/>
+        <Button x:Name="btnSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="1118,188,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="SenhaBtn_Click"/>
+        <Button x:Name="btnAluno" Content="{x:Static resources:Idioma.txtAluno}" HorizontalAlignment="Left" Margin="1118,101,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AlunoBtn_Click"/>
+        <Button x:Name="btnLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="1118,58,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Logradourobtn_Click"/>
         <Frame x:Name="mainFrame" Content="" Margin="0,0,195,0" Background="#FF909090"/>
-        <Button x:Name="FrequenciaBtn" Content="Frequência" HorizontalAlignment="Left" Margin="1119,318,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="FrequenciaBtn_Click"/>
-        <Button x:Name="treinosbtn" Content="Treinos" HorizontalAlignment="Left" Margin="1118,404,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
-        <Button x:Name="Aulasbtn" Content="Aulas" HorizontalAlignment="Left" Margin="1118,360,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
-        <Button x:Name="AvaliacaoBtn" Content="Avaliação" HorizontalAlignment="Left" Margin="1118,274,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AvaliacaoBtn_Click"/>
-        <Button x:Name="ColaboradorBtn" Content="Colaborador" HorizontalAlignment="Left" Margin="1118,144,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="ColaboradorBtn_Click"/>
+        <Button x:Name="btnFrequencia" Content="{x:Static resources:Idioma.txtFrequencia}" HorizontalAlignment="Left" Margin="1119,318,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="FrequenciaBtn_Click"/>
+        <Button x:Name="btnTreinos" Content="{x:Static resources:Idioma.txtTreinos}" HorizontalAlignment="Left" Margin="1118,404,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
+        <Button x:Name="btnAulas" Content="{x:Static resources:Idioma.txtAulas}" HorizontalAlignment="Left" Margin="1118,360,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
+        <Button x:Name="btnAvaliacao" Content="{x:Static resources:Idioma.txtAvaliação}" HorizontalAlignment="Left" Margin="1118,274,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AvaliacaoBtn_Click"/>
+        <Button x:Name="btnColaborador" Content="{x:Static resources:Idioma.txtColaborador}" HorizontalAlignment="Left" Margin="1118,144,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="ColaboradorBtn_Click"/>
+        <Button Content="pt-BR" Click="ButtonPortuguese_Click" HorizontalAlignment="Left" Margin="1118,130,0,0" VerticalAlignment="Top" Height="38" Width="133" />
+        <Button Content="en-US" Click="ButtonEnglish_Click" HorizontalAlignment="Left" Margin="1118,120,0,0" VerticalAlignment="Top" Height="38" Width="133" />
+        <Button Content="es-ES" Click="ButtonSpanish_Click" HorizontalAlignment="Left" Margin="1118,105,0,0" VerticalAlignment="Top" Height="38" Width="133" />
     </Grid>
 </Window>
