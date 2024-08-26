@@ -4,30 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+        xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="444" Width="408">
+        Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF909090">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="26*"/>
-            <ColumnDefinition Width="44*"/>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="23*"/>
-            <ColumnDefinition Width="508*"/>
-            <ColumnDefinition Width="91*"/>
-            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="16*"/>
             <RowDefinition Height="201*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="logar" Content="Logar" HorizontalAlignment="Left" Margin="53,288,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click" Height="72" Width="136" Grid.Column="5"/>
-        <TextBox x:Name="Senha" HorizontalAlignment="Left" Margin="33,242,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20" Grid.Column="5"/>
-        <TextBox x:Name="Cpf" HorizontalAlignment="Left" Margin="33,151,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20" Grid.Column="5"/>
-        <Label x:Name="NomeAcad" Content="Academia do Zé" HorizontalAlignment="Left" Margin="44,5,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="5" Grid.RowSpan="2"/>
-        <Label x:Name="CPF" Content="CPF:" HorizontalAlignment="Left" Margin="104,118,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Grid.Column="5"/>
-        <Label x:Name="SENHA" Content="Senha:&#xD;&#xA;" HorizontalAlignment="Left" Margin="97,198,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Grid.Column="5"/>
-        <Image Grid.Column="5" Margin="49,9,68,283" Source="/logo.png" Stretch="Fill" Grid.Row="1"/>
+        <Button x:Name="logarBtn" Content="Login" HorizontalAlignment="Left" Margin="535,248,0,0" Grid.Row="1" VerticalAlignment="Top" Click="ButtonLogin_Click" Height="72" Width="136" Grid.ColumnSpan="2" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="Senha" HorizontalAlignment="Left" Margin="515,175,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="Cpf" HorizontalAlignment="Left" Margin="515,106,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20" Grid.ColumnSpan="2"/>
+        <Label x:Name="NomeAcad" Content="{Binding Path=(resources:Idioma.tituloPrincipal)}" HorizontalAlignment="Left" Margin="132,279,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe UI Black" Height="91" Width="216"/>
+        <Label x:Name="CPF" Content="{Binding Path=(resources:Idioma.CPF)}" HorizontalAlignment="Left" Margin="514,74,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" FontFamily="Segoe UI Black"/>
+        <Label x:Name="senhaMain" Content="{Binding Path=(resources:Idioma.senhaMain)}" HorizontalAlignment="Left" Margin="514,140,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" FontFamily="Segoe UI Black"/>
+        <Label x:Name="login" Content="LOGIN" HorizontalAlignment="Left" Margin="566,29,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Black"/>
+        <Image x:Name="logoLogin" Margin="56,-8,254,82" Source="/logo.png" Stretch="Fill" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

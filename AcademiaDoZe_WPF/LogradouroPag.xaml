@@ -4,26 +4,26 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+      xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
       mc:Ignorable="d"
       Title="LogradouroPag" Height="578" Width="1006">
 
     <Grid Background="#FF909090">
-        <Label x:Name="IdLog" Content="ID:" HorizontalAlignment="Left" Margin="139,101,0,0" VerticalAlignment="Top" Height="32" Width="29"/>
-        <TextBox x:Name="textIdLog" HorizontalAlignment="Left" Margin="139,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
-        <Label x:Name="cepLog" Content="CEP:" HorizontalAlignment="Left" Margin="319,101,0,0" VerticalAlignment="Top" Height="32" Width="40"/>
-        <TextBox x:Name="TextCepLog" HorizontalAlignment="Left" Margin="323,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
-        <Label x:Name="logradouroLog" Content="Logradouro:" HorizontalAlignment="Left" Margin="588,101,0,0" VerticalAlignment="Top" Height="32" Width="91"/>
-        <TextBox x:Name="textLogradouroLog" HorizontalAlignment="Left" Margin="592,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="23"/>
-        <Label x:Name="bairroLog" Content="Bairro:" HorizontalAlignment="Left" Margin="136,165,0,0" VerticalAlignment="Top" Height="32" Width="53"/>
-        <TextBox x:Name="textBairroLog" HorizontalAlignment="Left" Margin="139,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Height="23"/>
-        <Label x:Name="h1Log" Content="Logradouro:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Label x:Name="cidadeLog" Content="Cidade:" HorizontalAlignment="Left" Margin="512,165,0,0" VerticalAlignment="Top" Height="32" Width="60"/>
-        <Label x:Name="ufLog" Content="UF:" HorizontalAlignment="Left" Margin="137,233,0,0" VerticalAlignment="Top" Height="32" Width="33"/>
-        <Label x:Name="paisLog" Content="País:" HorizontalAlignment="Left" Margin="328,233,0,0" VerticalAlignment="Top" Height="32" Width="39"/>
-        <ComboBox x:Name="textCidadeLog" HorizontalAlignment="Left" Margin="518,192,0,0" VerticalAlignment="Top" Width="430" Height="23"/>
-        <ComboBox x:Name="textPaisLog" HorizontalAlignment="Left" Margin="328,265,0,0" VerticalAlignment="Top" Width="618" Height="24"/>
-        <ComboBox x:Name="textUfLog" HorizontalAlignment="Left" Margin="139,265,0,0" VerticalAlignment="Top" Width="156" Height="24"/>
-        <Button x:Name="salvarLog" Content="Salvar" HorizontalAlignment="Left" Margin="766,462,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarLog_Click"/>
-
+        <Label x:Name="idLog" Content="ID" HorizontalAlignment="Left" Margin="139,96,0,0" VerticalAlignment="Top" Height="32" Width="29" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textIdLog" HorizontalAlignment="Left" Margin="141,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="23" FontFamily="Segoe UI Black"/>
+        <Label x:Name="cep_Log" Content="{Binding Path=(resources:Idioma.cep_Log)}" HorizontalAlignment="Left" Margin="485,222,0,0" VerticalAlignment="Top" Height="32" Width="147" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="TextCepLog" HorizontalAlignment="Left" Margin="489,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="234" Height="23" FontFamily="Segoe UI Black"/>
+        <Label x:Name="logradouro_Log" Content="{Binding Path=(resources:Idioma.Logradourobtn)}" HorizontalAlignment="Left" Margin="137,167,0,0" VerticalAlignment="Top" Height="32" Width="91" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textLogradouroLog" HorizontalAlignment="Left" Margin="141,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="335" Height="23" FontFamily="Segoe UI Black"/>
+        <Label x:Name="bairroLog" Content="" HorizontalAlignment="Left" Margin="136,222,0,0" VerticalAlignment="Top" Height="32" Width="53" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textBairroLog" HorizontalAlignment="Left" Margin="141,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="335" Height="23" FontFamily="Segoe UI Black"/>
+        <Label x:Name="h1Log" Content="{Binding Path=(resources:Idioma.Logradourobtn)}" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Segoe UI Black"/>
+        <Label x:Name="cidade_Log" Content="" HorizontalAlignment="Left" Margin="135,289,0,0" VerticalAlignment="Top" Height="32" Width="60" FontFamily="Segoe UI Black"/>
+        <Label x:Name="uf_Log" Content="UF" HorizontalAlignment="Left" Margin="312,284,0,0" VerticalAlignment="Top" Height="32" Width="33" FontFamily="Segoe UI Black"/>
+        <Label x:Name="pais_Log" Content="" HorizontalAlignment="Left" Margin="486,284,0,0" VerticalAlignment="Top" Height="32" Width="39" FontFamily="Segoe UI Black"/>
+        <ComboBox x:Name="textCidadeLog" HorizontalAlignment="Left" Margin="141,316,0,0" VerticalAlignment="Top" Width="144" Height="23" FontFamily="Segoe UI Black"/>
+        <ComboBox x:Name="textPaisLog" HorizontalAlignment="Left" Margin="489,316,0,0" VerticalAlignment="Top" Width="234" Height="24" FontFamily="Segoe UI Black"/>
+        <ComboBox x:Name="textUfLog" HorizontalAlignment="Left" Margin="314,316,0,0" VerticalAlignment="Top" Width="144" Height="24" FontFamily="Segoe UI Black"/>
+        <Button x:Name="salvarLog" Content="Salvar" HorizontalAlignment="Left" Margin="780,483,0,0" Height="61" Width="180" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
     </Grid>
 </Page>

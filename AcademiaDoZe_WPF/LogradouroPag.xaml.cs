@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,31 @@ namespace AcademiaDoZe_WPF
         public LogradouroPag()
         {
             InitializeComponent();
+            this.Loaded += Page_Loaded;
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ClassFuncoes.AjustaResources(this);
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            // en-US, es-ES, pt-BR
+            // Definir a cultura
+            CultureInfo culture = new CultureInfo(cultureCode);
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
+            // Recargar a interface do usuário para refletir as mudanças
+            var oldWindow = this;
+            var newWindow = new MainWindow();
+            Application.Current.MainWindow = newWindow;
+            newWindow.Show();
+            oldWindow.Close();
         }
 
-        private void salvarLog_Click(object sender, RoutedEventArgs e)
+        private void Close()
         {
-
+            throw new NotImplementedException();
         }
     }
+
 }

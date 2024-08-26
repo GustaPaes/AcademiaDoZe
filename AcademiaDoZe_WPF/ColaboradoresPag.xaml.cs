@@ -25,9 +25,5 @@ namespace AcademiaDoZe_WPF
             InitializeComponent();
         }
 
-        private void salvarLog_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

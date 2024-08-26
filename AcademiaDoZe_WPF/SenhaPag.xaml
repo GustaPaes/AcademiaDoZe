@@ -8,17 +8,17 @@
       Title="SenhaPag" Height="578" Width="995">
 
     <Grid Background="#FF909090">
-        <Label x:Name="h1Sen" Content="Senha:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Button x:Name="salvarSen" Content="Salvar" HorizontalAlignment="Left" Margin="717,462,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarSen_Click"/>
-        <Label x:Name="IdSen" Content="ID:" HorizontalAlignment="Left" Margin="298,93,0,0" VerticalAlignment="Top" Height="32" Width="29"/>
-        <TextBox x:Name="textIdSen" HorizontalAlignment="Left" Margin="295,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="22"/>
-        <Label x:Name="CPFSen" Content="CPF:" HorizontalAlignment="Left" Margin="469,93,0,0" VerticalAlignment="Top" Height="32" Width="40"/>
-        <TextBox x:Name="TextCpfSen" HorizontalAlignment="Left" Margin="473,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="22"/>
-        <Label x:Name="NomeSen" Content="Nome:" HorizontalAlignment="Left" Margin="295,147,0,0" VerticalAlignment="Top" Height="32" Width="53"/>
-        <TextBox x:Name="textNomeSen" HorizontalAlignment="Center" Margin="0,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="22"/>
-        <Label x:Name="senhaSen" Content="Senha:" HorizontalAlignment="Left" Margin="295,202,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textSenhaSen" HorizontalAlignment="Left" Margin="292,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Height="22" />
-        <Label x:Name="resenhaSen" Content="Re-senha:" HorizontalAlignment="Left" Margin="520,202,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textResenhaSen" HorizontalAlignment="Left" Margin="520,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="22"/>
+        <Label x:Name="h1Sen" Content="SENHA" HorizontalAlignment="Left" Margin="448,61,0,0" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="0.561,-0.872" FontFamily="Segoe UI Black"/>
+        <Button x:Name="salvarSen" Content="SALVAR" HorizontalAlignment="Center" Margin="780,483,0,0" Height="61" Width="180" VerticalAlignment="Top" FontFamily="Segoe UI Black" Click="salvarSen_Click"/>
+        <Label x:Name="IdSen" Content="ID" HorizontalAlignment="Left" Margin="302,183,0,0" VerticalAlignment="Top" Height="32" Width="30" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textIdSen" HorizontalAlignment="Left" Margin="302,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="22" FontFamily="Segoe UI Black"/>
+        <Label x:Name="CPFSen" Content="CPF" HorizontalAlignment="Left" Margin="474,183,0,0" VerticalAlignment="Top" Height="32" Width="40" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="TextCpfSen" HorizontalAlignment="Left" Margin="478,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Height="22" FontFamily="Segoe UI Black"/>
+        <Label x:Name="NomeSen" Content="Nome" HorizontalAlignment="Left" Margin="300,237,0,0" VerticalAlignment="Top" Height="32" Width="52" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textNomeSen" HorizontalAlignment="Left" Margin="303,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" Height="22" FontFamily="Segoe UI Black"/>
+        <Label x:Name="senhaSen" Content="Senha" HorizontalAlignment="Left" Margin="302,291,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textSenhaSen" HorizontalAlignment="Left" Margin="302,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="22" FontFamily="Segoe UI Black" />
+        <Label x:Name="resenhaSen" Content="Confirme a Senha" HorizontalAlignment="Left" Margin="540,291,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textResenhaSen" HorizontalAlignment="Left" Margin="540,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="22" FontFamily="Segoe UI Black"/>
     </Grid>
 </Page>

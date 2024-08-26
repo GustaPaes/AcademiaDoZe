@@ -3,20 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+        xmlns:local="clr-namespace:AcademiaDoZe_WPF.Properties"
+        xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
         mc:Ignorable="d"
         Title="Home" Height="720" Width="1280">
     <Grid>
-        <Button x:Name="LOGOUT" Content="Logout" HorizontalAlignment="Left" Margin="1116,618,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="LOGOUT_Click"/>
-        <Button x:Name="Matriculabtn" Content="Matrícula" HorizontalAlignment="Left" Margin="1118,232,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Matriculabtn_Click"/>
-        <Button x:Name="SenhaBtn" Content="Senha" HorizontalAlignment="Left" Margin="1118,188,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="SenhaBtn_Click"/>
-        <Button x:Name="AlunoBtn" Content="Aluno" HorizontalAlignment="Left" Margin="1118,101,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AlunoBtn_Click"/>
-        <Button x:Name="Logradourobtn" Content="Logradouro" HorizontalAlignment="Left" Margin="1118,58,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Logradourobtn_Click"/>
+        <Button x:Name="LOGOUT" Content="Logout" HorizontalAlignment="Left" Margin="1119,630,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="LOGOUT_Click" FontFamily="Segoe UI Black"/>
+        <Button x:Name="Matriculabtn" Content="{Binding Path=(resources:Idioma.txtMatricula)}" HorizontalAlignment="Left" Margin="1119,180,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Matriculabtn_Click" FontFamily="Segoe UI Black"/>
+        <Button x:Name="SenhaBtn" Content="{Binding Path=(resources:Idioma.SenhaBtn)}" HorizontalAlignment="Left" Margin="1119,137,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="SenhaBtn_Click" FontFamily="Segoe UI Black"/>
+        <Button x:Name="AlunoBtn" Content="{Binding Path=(resources:Idioma.AlunoBtn)}" HorizontalAlignment="Left" Margin="1119,54,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AlunoBtn_Click" FontFamily="Segoe UI Black"/>
+        <Button x:Name="Logradourobtn" Content="{Binding Path=(resources:Idioma.Logradourobtn)}" HorizontalAlignment="Left" Margin="1119,11,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Logradourobtn_Click" FontFamily="Segoe UI Black"/>
         <Frame x:Name="mainFrame" Content="" Margin="0,0,195,0" Background="#FF909090"/>
-        <Button x:Name="FrequenciaBtn" Content="Frequência" HorizontalAlignment="Left" Margin="1119,318,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="FrequenciaBtn_Click"/>
-        <Button x:Name="treinosbtn" Content="Treinos" HorizontalAlignment="Left" Margin="1118,404,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
-        <Button x:Name="Aulasbtn" Content="Aulas" HorizontalAlignment="Left" Margin="1118,360,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
-        <Button x:Name="AvaliacaoBtn" Content="Avaliação" HorizontalAlignment="Left" Margin="1118,274,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AvaliacaoBtn_Click"/>
-        <Button x:Name="ColaboradorBtn" Content="Colaborador" HorizontalAlignment="Left" Margin="1118,144,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="ColaboradorBtn_Click"/>
+        <Button x:Name="FrequenciaBtn" Content="{Binding Path=(resources:Idioma.FrequenciaBtn)}" HorizontalAlignment="Left" Margin="1119,266,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="FrequenciaBtn_Click" FontFamily="Segoe UI Black"/>
+        <Button x:Name="treinosbtn" Content="{Binding Path=(resources:Idioma.treinosbtn)}" HorizontalAlignment="Left" Margin="1119,352,0,0" VerticalAlignment="Top" Height="38" Width="133" FontFamily="Segoe UI Black"/>
+        <Button x:Name="Aulasbtn" Content="{Binding Path=(resources:Idioma.Aulasbtn)}" HorizontalAlignment="Left" Margin="1119,309,0,0" VerticalAlignment="Top" Height="38" Width="133" FontFamily="Segoe UI Black"/>
+        <Button x:Name="AvaliacaoBtn" Content="{Binding Path=(resources:Idioma.AvaliacaoBtn)}" HorizontalAlignment="Left" Margin="1119,223,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AvaliacaoBtn_Click" FontFamily="Segoe UI Black"/>
+        <Button x:Name="ColaboradorBtn" Content="{Binding Path=(resources:Idioma.ColaboradorBtn)}" HorizontalAlignment="Left" Margin="1119,97,0,0" VerticalAlignment="Top" Height="35" Width="133" Click="ColaboradorBtn_Click" FontFamily="Segoe UI Black">
+        </Button>
+        <Image Margin="1117,390,24,192" Source="/logo.png" Stretch="Fill"/>
+        <Button x:Name="butEspanhol" Content="es-ES" HorizontalAlignment="Left" Margin="1119,588,0,0" VerticalAlignment="Top" Height="38" Width="133" FontFamily="Segoe UI Black" Click="ButtonSpanish_Click"/>
+        <Button x:Name="butIngles" Content="en-US" HorizontalAlignment="Left" Margin="1119,544,0,0" VerticalAlignment="Top" Height="38" Width="133" FontFamily="Segoe UI Black" Click="ButtonEnglish_Click"/>
+        <Button x:Name="butPortugues" Content="pt-BR" HorizontalAlignment="Left" Margin="1120,501,0,0" VerticalAlignment="Top" Height="38" Width="133" FontFamily="Segoe UI Black" Click="ButtonPortuguese_Click"/>
+
     </Grid>
 </Window>

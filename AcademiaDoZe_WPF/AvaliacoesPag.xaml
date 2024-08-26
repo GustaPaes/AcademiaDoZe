@@ -8,51 +8,53 @@
       Title="AvaliacoesPag" Height="578" Width="1006">
 
     <Grid Background="#FF909090">
-        <Label x:Name="IdAva" Content="Aluno:" HorizontalAlignment="Left" Margin="122,82,0,0" VerticalAlignment="Top" Height="32" Width="52"/>
-        <Label x:Name="NomeAluAva" Content="Nome Aluno:" HorizontalAlignment="Left" Margin="297,81,0,0" VerticalAlignment="Top" Height="32" Width="95"/>
-        <TextBox x:Name="textNomeAluAva" HorizontalAlignment="Left" Margin="300,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" Height="22"/>
-        <Label x:Name="h1Avaliacao" Content="Avaliação:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Label x:Name="dataAvaliacao" Content="Data:" HorizontalAlignment="Left" Margin="122,149,0,0" VerticalAlignment="Top" Width="105"/>
-        <DatePicker x:Name="textdataAva" HorizontalAlignment="Left" Margin="122,175,0,0" VerticalAlignment="Top" Width="146"/>
-        <Label x:Name="PesoAva" Content="Peso (kg):" HorizontalAlignment="Left" Margin="716,81,0,0" VerticalAlignment="Top" Height="32" Width="66"/>
-        <TextBox x:Name="textPesoAva" HorizontalAlignment="Left" Margin="716,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="idAlturaAva" Content="Altura (cm):" HorizontalAlignment="Left" Margin="831,81,0,0" VerticalAlignment="Top" Height="32" Width="70"/>
-        <TextBox x:Name="TextAlturaAva" HorizontalAlignment="Left" Margin="835,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="22"/>
-        <Label Content="Tórax:" HorizontalAlignment="Left" Margin="304,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="texttoraxAva" HorizontalAlignment="Left" Margin="304,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Cintura:" HorizontalAlignment="Left" Margin="427,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textCinturaAva" HorizontalAlignment="Left" Margin="427,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Quadril:" HorizontalAlignment="Left" Margin="555,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textquadrilAva" HorizontalAlignment="Left" Margin="555,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Antebraço Dir:" HorizontalAlignment="Left" Margin="120,222,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textAntDirAva" HorizontalAlignment="Left" Margin="120,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Antebraço Esq:" HorizontalAlignment="Left" Margin="243,222,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textAntEsqAva" HorizontalAlignment="Left" Margin="243,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Bíceps Dir:" HorizontalAlignment="Left" Margin="371,222,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBicDirAva" HorizontalAlignment="Left" Margin="371,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Bíceps Esq:" HorizontalAlignment="Left" Margin="493,222,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBicEsqAva" HorizontalAlignment="Left" Margin="493,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Coxa Dir:" HorizontalAlignment="Left" Margin="120,291,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textCoxDirAva" HorizontalAlignment="Left" Margin="120,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Coxa Esq:" HorizontalAlignment="Left" Margin="243,291,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textCoxEsqAva" HorizontalAlignment="Left" Margin="243,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Panturrilha Dir:" HorizontalAlignment="Left" Margin="371,291,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textPantDirAva" HorizontalAlignment="Left" Margin="371,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Panturrilha Esq:" HorizontalAlignment="Left" Margin="493,291,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textPantEsqAva" HorizontalAlignment="Left" Margin="493,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Observações:" HorizontalAlignment="Left" Margin="120,355,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textObservacoesAva" HorizontalAlignment="Left" Margin="120,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" Height="85"/>
-        <Button x:Name="salvarAva" Content="Salvar" HorizontalAlignment="Left" Margin="786,466,0,0" Height="61" Width="160" VerticalAlignment="Top" Click="salvarAva_Click"/>
-        <Label Content="Massa Magra:" HorizontalAlignment="Left" Margin="696,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textMassMagAva" HorizontalAlignment="Left" Margin="696,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Massa Gorda:" HorizontalAlignment="Left" Margin="832,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textMassGorAva" HorizontalAlignment="Left" Margin="832,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Percentual Gordura:" HorizontalAlignment="Left" Margin="623,222,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textGorduraAva" HorizontalAlignment="Left" Margin="623,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="Peso Ideal:" HorizontalAlignment="Left" Margin="760,222,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textPesIdeaAva" HorizontalAlignment="Left" Margin="760,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label Content="IMC:" HorizontalAlignment="Left" Margin="623,291,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textIMCAva" HorizontalAlignment="Left" Margin="623,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <ComboBox x:Name="textUfAlu" HorizontalAlignment="Left" Margin="122,109,0,0" VerticalAlignment="Top" Width="156" Height="24"/>
+        <Label x:Name="idAluAva" Content="ID Aluno" HorizontalAlignment="Left" Margin="120,83,0,0" VerticalAlignment="Top" Height="32" Width="70" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="TextIdAluAva" HorizontalAlignment="Left" Margin="124,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="22" FontFamily="Segoe UI Black"/>
+        <Label x:Name="CPFAluAva" Content="CPF Aluno" HorizontalAlignment="Left" Margin="246,83,0,0" VerticalAlignment="Top" Height="32" Width="80" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textCpfAluAva" HorizontalAlignment="Left" Margin="250,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="22" FontFamily="Segoe UI Black"/>
+        <Label x:Name="NomeAluAva" Content="Nome Aluno" HorizontalAlignment="Left" Margin="438,83,0,0" VerticalAlignment="Top" Height="32" Width="95" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textNomeAluAva" HorizontalAlignment="Left" Margin="441,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" Height="22" FontFamily="Segoe UI Black"/>
+        <Label x:Name="h1Avaliacao" Content="AVALIAÇÃO" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Segoe UI Black"/>
+        <Label x:Name="dataAvaliacao" Content="Data" HorizontalAlignment="Left" Margin="122,149,0,0" VerticalAlignment="Top" Width="105" FontFamily="Segoe UI Black"/>
+        <DatePicker x:Name="textdataAva" HorizontalAlignment="Left" Margin="122,175,0,0" VerticalAlignment="Top" Width="154" FontFamily="Segoe UI Black"/>
+        <Label x:Name="PesoAva" Content="Peso (kg):" HorizontalAlignment="Left" Margin="300,149,0,0" VerticalAlignment="Top" Height="32" Width="66" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textPesoAva" HorizontalAlignment="Left" Margin="300,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label x:Name="idAlturaAva" Content="Altura (cm)" HorizontalAlignment="Left" Margin="415,149,0,0" VerticalAlignment="Top" Height="32" Width="79" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="TextAlturaAva" HorizontalAlignment="Left" Margin="419,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Tórax" HorizontalAlignment="Left" Margin="122,220,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="texttoraxAva" HorizontalAlignment="Left" Margin="122,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Cintura" HorizontalAlignment="Left" Margin="245,220,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textCinturaAva" HorizontalAlignment="Left" Margin="245,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Quadril" HorizontalAlignment="Left" Margin="373,220,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textquadrilAva" HorizontalAlignment="Left" Margin="373,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Antebraço Dir" HorizontalAlignment="Left" Margin="122,284,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textAntDirAva" HorizontalAlignment="Left" Margin="122,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Antebraço Esq" HorizontalAlignment="Left" Margin="245,284,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textAntEsqAva" HorizontalAlignment="Left" Margin="245,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Bíceps Dir" HorizontalAlignment="Left" Margin="373,284,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textBicDirAva" HorizontalAlignment="Left" Margin="373,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Bíceps Esq" HorizontalAlignment="Left" Margin="495,284,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textBicEsqAva" HorizontalAlignment="Left" Margin="495,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Coxa Dir" HorizontalAlignment="Left" Margin="122,346,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textCoxDirAva" HorizontalAlignment="Left" Margin="122,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Coxa Esq" HorizontalAlignment="Left" Margin="245,346,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textCoxEsqAva" HorizontalAlignment="Left" Margin="245,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Panturrilha Dir" HorizontalAlignment="Left" Margin="373,346,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textPantDirAva" HorizontalAlignment="Left" Margin="373,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Panturrilha Esq" HorizontalAlignment="Left" Margin="495,346,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textPantEsqAva" HorizontalAlignment="Left" Margin="495,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Observações" HorizontalAlignment="Left" Margin="122,420,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textObservacoesAva" HorizontalAlignment="Left" Margin="122,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" Height="85" FontFamily="Segoe UI Black"/>
+        <Button x:Name="salvarAva" Content="SALVAR" HorizontalAlignment="Left" Margin="780,483,0,0" Height="61" Width="180" VerticalAlignment="Top" FontFamily="Segoe UI Black" Click="salvarAva_Click"/>
+        <Label Content="Massa Magra" HorizontalAlignment="Left" Margin="539,151,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textMassMagAva" HorizontalAlignment="Left" Margin="539,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Massa Gorda" HorizontalAlignment="Left" Margin="667,151,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textMassGorAva" HorizontalAlignment="Left" Margin="667,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Percentual Gordura" HorizontalAlignment="Left" Margin="789,151,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textGorduraAva" HorizontalAlignment="Left" Margin="789,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="Peso Ideal" HorizontalAlignment="Left" Margin="495,220,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textPesIdeaAva" HorizontalAlignment="Left" Margin="495,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
+        <Label Content="IMC" HorizontalAlignment="Left" Margin="694,220,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="textIMCAva" HorizontalAlignment="Left" Margin="694,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22" FontFamily="Segoe UI Black"/>
     </Grid>
 </Page>

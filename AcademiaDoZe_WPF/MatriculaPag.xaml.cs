@@ -24,7 +24,7 @@ namespace AcademiaDoZe_WPF
             InitializeComponent();
         }
 
-        private void salvarMat_Click(object sender, RoutedEventArgs e)
+        private void optDiabete_Checked(object sender, RoutedEventArgs e)
         {
 
         }
