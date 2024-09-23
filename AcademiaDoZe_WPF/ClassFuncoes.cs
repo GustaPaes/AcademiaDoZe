@@ -4,6 +4,7 @@ using System.Windows;
 using System.Configuration;
 using System.Globalization;
 using System.Windows.Input;
+using System.Windows.Controls;
 
 namespace AcademiaDoZe_WPF;
 
@@ -89,6 +90,36 @@ class ClassFuncoes
                     mainWindow.Button_Click(sender, e);
                 }
             }
+        }
+    }
+
+    public static void Box_GotFocus(object sender, RoutedEventArgs e)
+    {
+        var cor = Brushes.LightCyan;
+        if (sender is TextBox)
+        {
+            TextBox textBox = (TextBox)sender;
+            textBox.Background = cor;
+        }
+        else if (sender is PasswordBox)
+        {
+            PasswordBox passwordBox = (PasswordBox)sender;
+            passwordBox.Background = cor;
+        }
+    }
+
+    public static void Box_LostFocus(object sender, RoutedEventArgs e)
+    {
+        var cor = Brushes.White;
+        if (sender is TextBox)
+        {
+            TextBox textBox = (TextBox)sender;
+            textBox.Background = cor;
+        }
+        else if (sender is PasswordBox)
+        {
+            PasswordBox passwordBox = (PasswordBox)sender;
+            passwordBox.Background = cor;
         }
     }
 }

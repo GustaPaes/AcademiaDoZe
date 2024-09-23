@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace AcademiaDoZe_WPF
 {
@@ -11,7 +12,9 @@ namespace AcademiaDoZe_WPF
         public SenhaPag()
         {
             InitializeComponent();
+
             this.Loaded += Page_Loaded;
+            this.PreviewKeyDown += new KeyEventHandler(ClassFuncoes.Window_KeyDown);
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {

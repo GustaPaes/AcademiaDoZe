@@ -13,9 +13,11 @@ namespace AcademiaDoZe_WPF
         public MainWindow()
         {
             InitializeComponent();
+
             this.Loaded += Page_Loaded;
             this.PreviewKeyDown += new KeyEventHandler(ClassFuncoes.Window_KeyDown);
         }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ClassFuncoes.AjustaResources(this);
@@ -30,32 +32,12 @@ namespace AcademiaDoZe_WPF
 
         private void Box_GotFocus(object sender, RoutedEventArgs e)
         {
-            var cor = Brushes.LightCyan;
-            if (sender is TextBox)
-            {
-                TextBox textBox = (TextBox)sender;
-                textBox.Background = cor;
-            }
-            else if (sender is PasswordBox)
-            {
-                PasswordBox passwordBox = (PasswordBox)sender;
-                passwordBox.Background = cor;
-            }
+            ClassFuncoes.Box_GotFocus(sender, e);
         }
 
         private void Box_LostFocus(object sender, RoutedEventArgs e)
         {
-            var cor = Brushes.White;
-            if (sender is TextBox)
-            {
-                TextBox textBox = (TextBox)sender;
-                textBox.Background = cor;
-            }
-            else if (sender is PasswordBox)
-            {
-                PasswordBox passwordBox = (PasswordBox)sender;
-                passwordBox.Background = cor;
-            }
+            ClassFuncoes.Box_LostFocus(sender, e);
         }
     }
 }

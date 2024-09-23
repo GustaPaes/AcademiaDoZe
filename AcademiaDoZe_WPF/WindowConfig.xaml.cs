@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace AcademiaDoZe_WPF
 {
@@ -23,8 +12,9 @@ namespace AcademiaDoZe_WPF
         public WindowConfig()
         {
             InitializeComponent();
-            //seleciona no comboBox o idioma/cultura atual
+
             comboBoxIdioma.SelectedItem = ConfigurationManager.AppSettings.Get("IdiomaRegiao");
+            this.PreviewKeyDown += new KeyEventHandler(ClassFuncoes.Window_KeyDown);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -39,6 +29,5 @@ namespace AcademiaDoZe_WPF
             Close();
             _ = MessageBox.Show("Idioma/região alterada com sucesso!");
         }
-
     }
 }
