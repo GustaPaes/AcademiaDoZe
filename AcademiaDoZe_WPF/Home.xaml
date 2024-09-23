@@ -8,19 +8,19 @@
         mc:Ignorable="d"
         Title="Home" Height="720" Width="1280">
     <Grid>
-        <Button x:Name="btnLogout" Content="{x:Static resources:Idioma.txtLogout}" HorizontalAlignment="Left" Margin="1116,618,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="LOGOUT_Click"/>
-        <Button x:Name="btnMatricula" Content="{x:Static resources:Idioma.txtMatricula}" HorizontalAlignment="Left" Margin="1118,232,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Matriculabtn_Click"/>
-        <Button x:Name="btnSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="1118,188,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="SenhaBtn_Click"/>
-        <Button x:Name="btnAluno" Content="{x:Static resources:Idioma.txtAluno}" HorizontalAlignment="Left" Margin="1118,101,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AlunoBtn_Click"/>
-        <Button x:Name="btnLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="1118,58,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="Logradourobtn_Click"/>
-        <Frame x:Name="mainFrame" Content="" Margin="0,0,195,0" Background="#FF909090"/>
-        <Button x:Name="btnFrequencia" Content="{x:Static resources:Idioma.txtFrequencia}" HorizontalAlignment="Left" Margin="1119,318,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="FrequenciaBtn_Click"/>
-        <Button x:Name="btnTreinos" Content="{x:Static resources:Idioma.txtTreinos}" HorizontalAlignment="Left" Margin="1118,404,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
-        <Button x:Name="btnAulas" Content="{x:Static resources:Idioma.txtAulas}" HorizontalAlignment="Left" Margin="1118,360,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
-        <Button x:Name="btnAvaliacao" Content="{x:Static resources:Idioma.txtAvaliação}" HorizontalAlignment="Left" Margin="1118,274,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="AvaliacaoBtn_Click"/>
-        <Button x:Name="btnColaborador" Content="{x:Static resources:Idioma.txtColaborador}" HorizontalAlignment="Left" Margin="1118,144,0,0" VerticalAlignment="Top" Height="38" Width="133" Click="ColaboradorBtn_Click"/>
-        <Button Content="pt-BR" Click="ButtonPortuguese_Click" HorizontalAlignment="Left" Margin="1118,130,0,0" VerticalAlignment="Top" Height="38" Width="133" />
-        <Button Content="en-US" Click="ButtonEnglish_Click" HorizontalAlignment="Left" Margin="1118,120,0,0" VerticalAlignment="Top" Height="38" Width="133" />
-        <Button Content="es-ES" Click="ButtonSpanish_Click" HorizontalAlignment="Left" Margin="1118,105,0,0" VerticalAlignment="Top" Height="38" Width="133" />
+        <Button x:Name="txtLogout" Content="{x:Static resources:Idioma.txtLogout}" HorizontalAlignment="Left" Margin="29,636,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="LOGOUT_Click"/>
+        <Button x:Name="txtMatricula" Content="{x:Static resources:Idioma.txtMatricula}" HorizontalAlignment="Left" Margin="29,302,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="Matriculabtn_Click"/>
+        <Button x:Name="txtSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="29,264,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="SenhaBtn_Click"/>
+        <Button x:Name="txtAluno" Content="{x:Static resources:Idioma.txtAluno}" HorizontalAlignment="Left" Margin="29,188,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="AlunoBtn_Click"/>
+        <Button x:Name="txtLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="29,150,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="Logradourobtn_Click"/>
+        <Image HorizontalAlignment="Left" Height="116" Margin="22,15,0,0" VerticalAlignment="Top" Width="152" Source="/logo.png"/>
+        <Frame x:Name="mainFrame" Content="" Margin="195,0,0,0" Background="#FFB5B5B5"/>
+        <Button x:Name="txtFrequencia" Content="{x:Static resources:Idioma.txtFrequencia}" HorizontalAlignment="Left" Margin="29,378,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="FrequenciaBtn_Click"/>
+        <Button x:Name="txtTreinos" Content="{x:Static resources:Idioma.txtTreinos}" HorizontalAlignment="Left" Margin="29,454,0,0" VerticalAlignment="Top" Height="33" Width="133"/>
+        <Button x:Name="txtAulas" Content="{x:Static resources:Idioma.txtAulas}" HorizontalAlignment="Left" Margin="29,416,0,0" VerticalAlignment="Top" Height="33" Width="133"/>
+        <Button x:Name="txtAvaliacao" Content="{x:Static resources:Idioma.txtAvaliacao}" HorizontalAlignment="Left" Margin="29,340,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="AvaliacaoBtn_Click"/>
+        <Button x:Name="txtColaborador" Content="{x:Static resources:Idioma.txtColaborador}" HorizontalAlignment="Left" Margin="29,226,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="ColaboradorBtn_Click"/>
+        <Button x:Name="txtConfig" Content="{x:Static resources:Idioma.txtConfig}" HorizontalAlignment="Left" Margin="29,598,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="txtConfig_Click"/>
+
     </Grid>
 </Window>

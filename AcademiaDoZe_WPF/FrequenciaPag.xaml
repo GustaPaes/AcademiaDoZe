@@ -4,23 +4,20 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+      xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
       mc:Ignorable="d" 
       Title="FrequenciaPag" Height="578" Width="1006">
 
-    <Grid Background="#FF909090">
-        <Label x:Name="h1Matricula" Content="Frequência:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Label x:Name="IdMat" Content="ID:" HorizontalAlignment="Left" Margin="166,82,0,0" VerticalAlignment="Top" Height="32" Width="26"/>
-        <TextBox x:Name="textIdMat" HorizontalAlignment="Left" Margin="166,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="22"/>
-        <Label x:Name="idAluMat" Content="Aluno:" HorizontalAlignment="Left" Margin="318,82,0,0" VerticalAlignment="Top" Height="32" Width="70"/>
-        <TextBox x:Name="TextIdAluMat" HorizontalAlignment="Left" Margin="322,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130
-                 " Height="22"/>
-        <Label x:Name="CPFAluMat" Content="CPF Aluno:" HorizontalAlignment="Left" Margin="499,82,0,0" VerticalAlignment="Top" Height="32" Width="81"/>
-        <TextBox x:Name="textCpfAluMat" HorizontalAlignment="Left" Margin="503,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" Height="22"/>
-        <Label x:Name="entradaFreq" Content="Entrada:" HorizontalAlignment="Left" Margin="282,174,0,0" VerticalAlignment="Top" Width="106"/>
-        <DatePicker x:Name="textEntradaFreq" HorizontalAlignment="Left" Margin="282,200,0,0" VerticalAlignment="Top" Width="146"/>
-        <Label x:Name="SaidaFreq" Content="Saída:" HorizontalAlignment="Left" Margin="540,174,0,0" VerticalAlignment="Top" Width="104"/>
-        <DatePicker x:Name="textSaidaFreq" HorizontalAlignment="Left" Margin="540,200,0,0" VerticalAlignment="Top" Width="146"/>
-        <Button x:Name="salvarMat" Content="Salvar" HorizontalAlignment="Left" Margin="767,457,0,0" Height="62" Width="160" VerticalAlignment="Top" Click="salvarFreqClick"/>
-
+    <Grid Background="#FFB5B5B5">
+        <Label x:Name="txtFrequencia" Content="{x:Static resources:Idioma.txtFrequencia}" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="txtIdAluno" Content="{x:Static resources:Idioma.txtIdAluno}" HorizontalAlignment="Left" Margin="241,121,0,0" VerticalAlignment="Top" Height="32" Width="105"/>
+        <TextBox x:Name="textIdAluno" HorizontalAlignment="Left" Margin="245,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="22"/>
+        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="422,121,0,0" VerticalAlignment="Top" Height="32" Width="229"/>
+        <TextBox x:Name="textCpf" HorizontalAlignment="Left" Margin="426,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" Height="22"/>
+        <Label x:Name="txtEntrada" Content="{x:Static resources:Idioma.txtEntrada}" HorizontalAlignment="Left" Margin="245,204,0,0" VerticalAlignment="Top" Width="126"/>
+        <DatePicker x:Name="textEntrada" HorizontalAlignment="Left" Margin="245,230,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label x:Name="txtSaida" Content="{x:Static resources:Idioma.txtSaida}" HorizontalAlignment="Left" Margin="426,204,0,0" VerticalAlignment="Top" Width="104"/>
+        <DatePicker x:Name="textSaida" HorizontalAlignment="Left" Margin="426,230,0,0" VerticalAlignment="Top" Width="146"/>
+        <Button x:Name="txtSalvar" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="780,480,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarFreqClick"/>
     </Grid>
 </Page>

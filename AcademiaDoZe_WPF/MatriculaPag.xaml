@@ -4,48 +4,49 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe_WPF"
+      xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
         mc:Ignorable="d"
         Title="MatriculaPag" Height="578" Width="1006">
-    <Grid Background="#FF909090">
-        <Label x:Name="h1Matricula" Content="Matrícula:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Button x:Name="salvarMat" Content="Salvar" HorizontalAlignment="Left" Margin="811,491,0,0" Height="61" Width="160" VerticalAlignment="Top" Click="salvarMat_Click"/>
-        <Label x:Name="IdMat" Content="ID:" HorizontalAlignment="Left" Margin="166,82,0,0" VerticalAlignment="Top" Height="32" Width="26"/>
+    <Grid Background="#FFB5B5B5">
+        <Label x:Name="txtMatricula" Content="{x:Static resources:Idioma.txtMatricula}" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Button x:Name="txtSalvar" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="780,480,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarMat_Click"/>
+        <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="166,82,0,0" VerticalAlignment="Top" Height="32" Width="92"/>
         <TextBox x:Name="textIdMat" HorizontalAlignment="Left" Margin="166,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="22"/>
-        <Label x:Name="idAluMat" Content="ID Aluno:" HorizontalAlignment="Left" Margin="318,82,0,0" VerticalAlignment="Top" Height="32" Width="70"/>
+        <Label x:Name="txtIdAluno" Content="{x:Static resources:Idioma.txtIdAluno}" HorizontalAlignment="Left" Margin="318,82,0,0" VerticalAlignment="Top" Height="32" Width="133"/>
         <TextBox x:Name="TextIdAluMat" HorizontalAlignment="Left" Margin="322,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="22"/>
-        <Label x:Name="CPFAluMat" Content="CPF Aluno:" HorizontalAlignment="Left" Margin="566,82,0,0" VerticalAlignment="Top" Height="32" Width="81"/>
+        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="566,82,0,0" VerticalAlignment="Top" Height="32" Width="141"/>
         <TextBox x:Name="textCpfAluMat" HorizontalAlignment="Left" Margin="570,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" Height="22"/>
-        <Label x:Name="NomeAluMat" Content="Nome Aluno:" HorizontalAlignment="Left" Margin="163,136,0,0" VerticalAlignment="Top" Height="32" Width="95"/>
+        <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="163,136,0,0" VerticalAlignment="Top" Height="32" Width="221"/>
         <TextBox x:Name="textNomeAluMat" HorizontalAlignment="Left" Margin="166,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="719" Height="22"/>
         <StackPanel x:Name="StackpanelCol2" HorizontalAlignment="Left" Height="110" Margin="163,231,0,0" VerticalAlignment="Top" Width="95">
-            <RadioButton x:Name="mensalMat" Content="Mensal" Height="24"/>
-            <RadioButton x:Name="trimestralMat" Content="Trimestral" Height="24"/>
-            <RadioButton x:Name="semestralMat" Content="Semestral" Height="24"/>
-            <RadioButton x:Name="anualMat" Content="Anual"/>
+            <RadioButton x:Name="txtMensal" Content="{x:Static resources:Idioma.txtMensal}" Height="24"/>
+            <RadioButton x:Name="txtTrimestral" Content="{x:Static resources:Idioma.txtTrimestral}" Height="24"/>
+            <RadioButton x:Name="txtSemestral" Content="{x:Static resources:Idioma.txtSemestral}" Height="24"/>
+            <RadioButton x:Name="txtAnual" Content="{x:Static resources:Idioma.txtAnual}"/>
         </StackPanel>
-        <Label x:Name="inicioMat" Content="Início:" HorizontalAlignment="Left" Margin="277,199,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="txtInicio" Content="{x:Static resources:Idioma.txtInicio}" HorizontalAlignment="Left" Margin="277,199,0,0" VerticalAlignment="Top" Width="105"/>
         <DatePicker x:Name="textInicioMat" HorizontalAlignment="Left" Margin="277,225,0,0" VerticalAlignment="Top" Width="146"/>
-        <Label x:Name="fimMat" Content="Fim:" HorizontalAlignment="Left" Margin="277,277,0,0" VerticalAlignment="Top" Width="105"/>
-        <DatePicker x:Name="textFimMat" HorizontalAlignment="Left" Margin="277,303,0,0" VerticalAlignment="Top" Width="146"/>
-        <StackPanel Margin="498,200,352,171">
-            <TextBlock Text="Restrições:" Margin="0 0 0 5"/>
-            <CheckBox x:Name="optNenhum" Content="Nenhuma"/>
-            <CheckBox x:Name="optProbCar" Content="Problemas Cardíacos"/>
-            <CheckBox x:Name="optProbResp" Content="Problemas Respiratórios"/>
-            <CheckBox x:Name="optLesMusc" Content="Lesões Musculares"/>
-            <CheckBox x:Name="optPressAlt" Content="Pressão Alta"/>
-            <CheckBox x:Name="optDiabete" Content="Diabetes"/>
-            <CheckBox x:Name="optGravidez" Content="Gravidez"/>
-            <CheckBox x:Name="optLabirinto" Content="Labirinto"/>
-            <CheckBox x:Name="optAlergias" Content="Alergias"/>
-            <CheckBox x:Name="optRemedio" Content="Remédio uso continuo"/>
-            <CheckBox x:Name="optOutras" Content="Outras"/>
+        <Label x:Name="txtFim" Content="{x:Static resources:Idioma.txtFim}" HorizontalAlignment="Left" Margin="277,291,0,0" VerticalAlignment="Top" Width="105"/>
+        <DatePicker x:Name="textFimMat" HorizontalAlignment="Left" Margin="277,317,0,0" VerticalAlignment="Top" Width="146"/>
+        <StackPanel Margin="489,201,361,170">
+            <TextBlock x:Name="txtRestricoes" Text="{x:Static resources:Idioma.txtRestricoes}" Margin="0 0 0 5"/>
+            <CheckBox x:Name="txtNenhuma" Content="{x:Static resources:Idioma.txtNenhuma}"/>
+            <CheckBox x:Name="txtProbCardiaco" Content="{x:Static resources:Idioma.txtProbCardiaco}"/>
+            <CheckBox x:Name="txtProbRespiratorio" Content="{x:Static resources:Idioma.txtProbRespiratorio}"/>
+            <CheckBox x:Name="txtLesoesMusculares" Content="{x:Static resources:Idioma.txtLesoesMusculares}"/>
+            <CheckBox x:Name="txtPressaoAlta" Content="{x:Static resources:Idioma.txtPressaoAlta}"/>
+            <CheckBox x:Name="txtDiabete" Content="{x:Static resources:Idioma.txtDiabete}"/>
+            <CheckBox x:Name="txtGravidez" Content="{x:Static resources:Idioma.txtGravidez}"/>
+            <CheckBox x:Name="txtLabirinto" Content="{x:Static resources:Idioma.txtLabirinto}"/>
+            <CheckBox x:Name="txtAlergias" Content="{x:Static resources:Idioma.txtAlergias}"/>
+            <CheckBox x:Name="txtRemedio" Content="{x:Static resources:Idioma.txtRemedio}"/>
+            <CheckBox x:Name="txtOutras" Content="{x:Static resources:Idioma.txtOutras}"/>
         </StackPanel>
-        <Label Content="Plano:" HorizontalAlignment="Left" Margin="163,200,0,0" VerticalAlignment="Top"/>
-        <Label Content="Objetivo:" HorizontalAlignment="Left" Margin="163,404,0,0" VerticalAlignment="Top"/>
-        <Label Content="Observação Restrição:" HorizontalAlignment="Left" Margin="487,404,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textObservacaoMat" HorizontalAlignment="Left" Margin="490,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Height="72"/>
-        <TextBox x:Name="textObjetivoMat" HorizontalAlignment="Left" Margin="163,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Height="72"/>
+        <Label x:Name="txtPlano" Content="{x:Static resources:Idioma.txtPlano}" HorizontalAlignment="Left" Margin="163,200,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="txtObjetivo" Content="{x:Static resources:Idioma.txtObjetivo}" HorizontalAlignment="Left" Margin="166,402,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label x:Name="txtObservacao" Content="{x:Static resources:Idioma.txtObservacao}" HorizontalAlignment="Left" Margin="490,402,0,0" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="textObservacaoMat" HorizontalAlignment="Left" Margin="493,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Height="72"/>
+        <TextBox x:Name="textObjetivoMat" HorizontalAlignment="Left" Margin="166,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Height="72"/>
 
     </Grid>
 </Page>

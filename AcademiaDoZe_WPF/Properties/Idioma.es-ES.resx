@@ -117,34 +117,241 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtLogout" xml:space="preserve">
-    <value>Logout</value>
+  <data name="txtAdministrador" xml:space="preserve">
+    <value>Administrador</value>
   </data>
-  <data name="txtMatricula" xml:space="preserve">
-    <value>Enrollment</value>
+  <data name="txtAdmissao" xml:space="preserve">
+    <value>Admisión</value>
   </data>
-  <data name="txtSenha" xml:space="preserve">
-    <value>Password</value>
+  <data name="txtAlergias" xml:space="preserve">
+    <value>Alergias</value>
+  </data>
+  <data name="txtAltura" xml:space="preserve">
+    <value>Altura</value>
   </data>
   <data name="txtAluno" xml:space="preserve">
-    <value>Student</value>
+    <value>Alumno</value>
+  </data>
+  <data name="txtAntDir" xml:space="preserve">
+    <value>Antebrazo Derecho</value>
+  </data>
+  <data name="txtAntEsq" xml:space="preserve">
+    <value>Antebrazo Izquierdo</value>
+  </data>
+  <data name="txtAnual" xml:space="preserve">
+    <value>Anual</value>
+  </data>
+  <data name="txtAtendente" xml:space="preserve">
+    <value>Asistente</value>
   </data>
   <data name="txtAulas" xml:space="preserve">
-    <value>Aulas</value>
-  </data>
-  <data name="txtFrequencia" xml:space="preserve">
-    <value>Attendance</value>
-  </data>
-  <data name="txtLogradouro" xml:space="preserve">
-    <value>Address</value>
-  </data>
-  <data name="txtTreinos" xml:space="preserve">
-    <value>Workouts</value>
-  </data>
-  <data name="txtColaborador" xml:space="preserve">
-    <value>Collaborator</value>
+    <value>Clases</value>
   </data>
   <data name="txtAvaliacao" xml:space="preserve">
-    <value>Avaliation</value>
+    <value>Evaluación</value>
+  </data>
+  <data name="txtBairro" xml:space="preserve">
+    <value>Barrio</value>
+  </data>
+  <data name="txtBicDir" xml:space="preserve">
+    <value>Bíceps Derecho</value>
+  </data>
+  <data name="txtBicEsq" xml:space="preserve">
+    <value>Bíceps Izquierdo</value>
+  </data>
+  <data name="txtCep" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="txtCidade" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="txtCintura" xml:space="preserve">
+    <value>Cintura</value>
+  </data>
+  <data name="txtClt" xml:space="preserve">
+    <value>Contrato Laboral</value>
+  </data>
+  <data name="txtColaborador" xml:space="preserve">
+    <value>Colaborador</value>
+  </data>
+  <data name="txtComplemento" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="txtConfig" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="txtCoxaDir" xml:space="preserve">
+    <value>Muslo Derecho</value>
+  </data>
+  <data name="txtCoxaEsq" xml:space="preserve">
+    <value>Muslo Izquierdo</value>
+  </data>
+  <data name="txtCpf" xml:space="preserve">
+    <value>Identificación Fiscal</value>
+  </data>
+  <data name="txtData" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="txtDiabete" xml:space="preserve">
+    <value>Diabetes</value>
+  </data>
+  <data name="txtEmail" xml:space="preserve">
+    <value>Correo Electrónico</value>
+  </data>
+  <data name="txtEntrada" xml:space="preserve">
+    <value>Entrada</value>
+  </data>
+  <data name="txtEstagio" xml:space="preserve">
+    <value>Pasantía</value>
+  </data>
+  <data name="txtFim" xml:space="preserve">
+    <value>Fin</value>
+  </data>
+  <data name="txtFrequencia" xml:space="preserve">
+    <value>Frecuencia</value>
+  </data>
+  <data name="txtGravidez" xml:space="preserve">
+    <value>Embarazo</value>
+  </data>
+  <data name="txtId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="txtIdAluno" xml:space="preserve">
+    <value>ID Estudiante</value>
+  </data>
+  <data name="txtIdEnd" xml:space="preserve">
+    <value>ID del Domicilio</value>
+  </data>
+  <data name="txtIdioma" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="txtImc" xml:space="preserve">
+    <value>IMC</value>
+  </data>
+  <data name="txtInicio" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="txtInstrutor" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="txtLabirinto" xml:space="preserve">
+    <value>Laberinto</value>
+  </data>
+  <data name="txtLesoesMusculares" xml:space="preserve">
+    <value>Lesiones Musculares</value>
+  </data>
+  <data name="txtLogout" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+  </data>
+  <data name="txtLogradouro" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="txtLogradouroh1" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="txtMassaGor" xml:space="preserve">
+    <value>Masa Corporal Grasa</value>
+  </data>
+  <data name="txtMassaMag" xml:space="preserve">
+    <value>Masa Corporal Magra</value>
+  </data>
+  <data name="txtMatricula" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="txtMensal" xml:space="preserve">
+    <value>Mensual</value>
+  </data>
+  <data name="txtNascimento" xml:space="preserve">
+    <value>Fecha de Nacimiento</value>
+  </data>
+  <data name="txtNenhuma" xml:space="preserve">
+    <value>Ninguna</value>
+  </data>
+  <data name="txtNome" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="txtNumero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="txtObjetivo" xml:space="preserve">
+    <value>Objetivo</value>
+  </data>
+  <data name="txtObservacao" xml:space="preserve">
+    <value>Observación</value>
+  </data>
+  <data name="txtOutras" xml:space="preserve">
+    <value>Otras</value>
+  </data>
+  <data name="txtPais" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="txtPantDir" xml:space="preserve">
+    <value>Pantorrilla Derecha</value>
+  </data>
+  <data name="txtPantEsq" xml:space="preserve">
+    <value>Pantorrilla Izquierda</value>
+  </data>
+  <data name="txtPercGor" xml:space="preserve">
+    <value>Porcentaje de Grasa Corporal</value>
+  </data>
+  <data name="txtPeso" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="txtPesoIdeal" xml:space="preserve">
+    <value>Peso Ideal</value>
+  </data>
+  <data name="txtPlano" xml:space="preserve">
+    <value>Plan</value>
+  </data>
+  <data name="txtPressaoAlta" xml:space="preserve">
+    <value>Presión Alta</value>
+  </data>
+  <data name="txtProbCardiaco" xml:space="preserve">
+    <value>Problema Cardíaco</value>
+  </data>
+  <data name="txtProbRespiratorio" xml:space="preserve">
+    <value>Problema Respiratorio</value>
+  </data>
+  <data name="txtQuadril" xml:space="preserve">
+    <value>Cadera</value>
+  </data>
+  <data name="txtRemedio" xml:space="preserve">
+    <value>Medicamento de Uso Continuo</value>
+  </data>
+  <data name="txtReSenha" xml:space="preserve">
+    <value>Recontraseña</value>
+  </data>
+  <data name="txtRestricoes" xml:space="preserve">
+    <value>Restricciones</value>
+  </data>
+  <data name="txtSaida" xml:space="preserve">
+    <value>Salida</value>
+  </data>
+  <data name="txtSalvar" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="txtSemestral" xml:space="preserve">
+    <value>Semestral</value>
+  </data>
+  <data name="txtSenha" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="txtSenhah1" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="txtTelefone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="txtTorax" xml:space="preserve">
+    <value>Pecho</value>
+  </data>
+  <data name="txtTreinos" xml:space="preserve">
+    <value>Entrenamientos</value>
+  </data>
+  <data name="txtTrimestral" xml:space="preserve">
+    <value>Trimestral</value>
+  </data>
+  <data name="txtUf" xml:space="preserve">
+    <value>Estado</value>
   </data>
 </root>

@@ -6,29 +6,24 @@
         xmlns:local="clr-namespace:AcademiaDoZe_WPF"
         xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="444" Width="408">
-    <Grid Background="#FF909090">
+        Title="MainWindow" Height="429" Width="415">
+    <Grid Margin="0,0,0,3">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="26*"/>
-            <ColumnDefinition Width="44*"/>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="23*"/>
-            <ColumnDefinition Width="508*"/>
-            <ColumnDefinition Width="91*"/>
-            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="16*"/>
             <RowDefinition Height="201*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="logar" Content="Logar" HorizontalAlignment="Left" Margin="53,288,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click" Height="72" Width="136" Grid.Column="5"/>
-        <TextBox x:Name="Senha" HorizontalAlignment="Left" Margin="33,242,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20" Grid.Column="5"/>
-        <TextBox x:Name="Cpf" HorizontalAlignment="Left" Margin="33,151,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20" Grid.Column="5"/>
-        <Label x:Name="NomeAcad" Content="Academia do Zé" HorizontalAlignment="Left" Margin="44,5,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="5" Grid.RowSpan="2"/>
-        <Label x:Name="CPF" Content="CPF:" HorizontalAlignment="Left" Margin="104,118,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Grid.Column="5"/>
-        <Label x:Name="SENHA" Content="Senha:&#xD;&#xA;" HorizontalAlignment="Left" Margin="97,198,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Grid.Column="5"/>
-        <Image Grid.Column="5" Margin="49,9,68,283" Source="/logo.png" Stretch="Fill" Grid.Row="1"/>
+        <Button x:Name="txtLogar" Content="Logar" HorizontalAlignment="Left" Margin="133,276,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click" Height="72" Width="136"/>
+        <TextBox x:Name="Senha" HorizontalAlignment="Left" Margin="108,232,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20"/>
+        <TextBox x:Name="Cpf" HorizontalAlignment="Left" Margin="108,158,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20"/>
+        <Image x:Name="Imagem" Margin="201,10,318,305" Source="/Image1.png" Stretch="Fill" Grid.RowSpan="2"/>
+        <Label x:Name="txtAcademia" Content="Academia do Zé" HorizontalAlignment="Left" Margin="131,75,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="108,125,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Width="200"/>
+        <Label x:Name="txtSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="108,207,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Width="266" Grid.ColumnSpan="2"/>
+        <Image Margin="141,15,73,288" Source="/logo.png" Stretch="Fill" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

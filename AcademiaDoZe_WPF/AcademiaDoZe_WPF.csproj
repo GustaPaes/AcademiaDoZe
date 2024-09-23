@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,15 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\Idioma.en-US.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Idioma.en-US.resx</DependentUpon>
-    </Compile>
     <Compile Update="Properties\Idioma.es-ES.Designer.cs">
+      <DependentUpon>Idioma.es-ES.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-	  <DependentUpon>Idioma.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Idioma.en-US.Designer.cs">
+      <DependentUpon>Idioma.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Properties\Idioma.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -35,12 +36,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Idioma.en-US.resx">
-      <LastGenOutput>Idioma.en-US.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Idioma.es-ES.resx">
       <LastGenOutput>Idioma.es-ES.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Idioma.en-US.resx">
+      <LastGenOutput>Idioma.en-US.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Idioma.resx">
