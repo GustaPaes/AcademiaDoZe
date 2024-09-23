@@ -9,55 +9,55 @@
       Title="AvaliacoesPag" Height="578" Width="1006">
 
     <Grid Background="#FFB5B5B5">
-        <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="122,82,0,0" VerticalAlignment="Top" Height="32" Width="88"/>
-        <TextBox x:Name="textIdAva" HorizontalAlignment="Left" Margin="122,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtIdAluno" Content="{x:Static resources:Idioma.txtIdAluno}" HorizontalAlignment="Left" Margin="237,82,0,0" VerticalAlignment="Top" Height="32" Width="107"/>
-        <TextBox x:Name="TextIdAluAva" HorizontalAlignment="Left" Margin="241,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="22"/>
-        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="363,82,0,0" VerticalAlignment="Top" Height="32" Width="163"/>
-        <TextBox x:Name="textCpfAluAva" HorizontalAlignment="Left" Margin="367,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="22"/>
-        <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="555,82,0,0" VerticalAlignment="Top" Height="32" Width="235"/>
-        <TextBox x:Name="textNomeAluAva" HorizontalAlignment="Left" Margin="558,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" Height="22"/>
+        <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="90,77,0,0" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBox x:Name="textIdAva" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="90,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtIdAluno" Content="{x:Static resources:Idioma.txtIdAluno}" HorizontalAlignment="Left" Margin="205,77,0,0" VerticalAlignment="Top" Height="32" Width="107"/>
+        <TextBox x:Name="TextIdAluAva" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="209,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="22"/>
+        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="331,77,0,0" VerticalAlignment="Top" Height="32" Width="163"/>
+        <TextBox x:Name="textCpfAluAva" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="335,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="22"/>
+        <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="523,77,0,0" VerticalAlignment="Top" Height="32" Width="235"/>
+        <TextBox x:Name="textNomeAluAva" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="526,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" Height="22"/>
         <Label x:Name="txtAvaliacao" Content="{x:Static resources:Idioma.txtAvaliacao}" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Label x:Name="txtData" Content="{x:Static resources:Idioma.txtData}" HorizontalAlignment="Left" Margin="122,149,0,0" VerticalAlignment="Top" Width="161"/>
-        <DatePicker x:Name="textdataAva" HorizontalAlignment="Left" Margin="122,175,0,0" VerticalAlignment="Top" Width="146"/>
-        <Label x:Name="txtPeso" Content="{x:Static resources:Idioma.txtPeso}" HorizontalAlignment="Left" Margin="300,149,0,0" VerticalAlignment="Top" Height="32" Width="97"/>
-        <TextBox x:Name="textPesoAva" HorizontalAlignment="Left" Margin="300,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtAltura" Content="{x:Static resources:Idioma.txtAltura}" HorizontalAlignment="Left" Margin="415,149,0,0" VerticalAlignment="Top" Height="32" Width="140"/>
-        <TextBox x:Name="TextAlturaAva" HorizontalAlignment="Left" Margin="419,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="22"/>
-        <Label x:Name="txtTorax" Content="{x:Static resources:Idioma.txtTorax}" HorizontalAlignment="Left" Margin="122,220,0,0" VerticalAlignment="Top" Width="104"/>
-        <TextBox x:Name="texttoraxAva" HorizontalAlignment="Left" Margin="122,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtCintura" Content="{x:Static resources:Idioma.txtCintura}" HorizontalAlignment="Left" Margin="245,220,0,0" VerticalAlignment="Top" Width="88"/>
-        <TextBox x:Name="textCinturaAva" HorizontalAlignment="Left" Margin="245,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtQuadril" Content="{x:Static resources:Idioma.txtQuadril}" HorizontalAlignment="Left" Margin="373,220,0,0" VerticalAlignment="Top" Width="130"/>
-        <TextBox x:Name="textquadrilAva" HorizontalAlignment="Left" Margin="373,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtAntDir" Content="{x:Static resources:Idioma.txtAntDir}" HorizontalAlignment="Left" Margin="122,284,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textAntDirAva" HorizontalAlignment="Left" Margin="122,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtAntEsq" Content="{x:Static resources:Idioma.txtAntEsq}" HorizontalAlignment="Left" Margin="245,284,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textAntEsqAva" HorizontalAlignment="Left" Margin="245,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtBicDir" Content="{x:Static resources:Idioma.txtBicDir}" HorizontalAlignment="Left" Margin="373,284,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBicDirAva" HorizontalAlignment="Left" Margin="373,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtBicEsq" Content="{x:Static resources:Idioma.txtBicEsq}" HorizontalAlignment="Left" Margin="495,284,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBicEsqAva" HorizontalAlignment="Left" Margin="495,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtCoxaDir" Content="{x:Static resources:Idioma.txtCoxaDir}" HorizontalAlignment="Left" Margin="122,346,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textCoxDirAva" HorizontalAlignment="Left" Margin="122,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtCoxaEsq" Content="{x:Static resources:Idioma.txtCoxaEsq}" HorizontalAlignment="Left" Margin="245,346,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textCoxEsqAva" HorizontalAlignment="Left" Margin="245,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtPantDir" Content="{x:Static resources:Idioma.txtPantDir}" HorizontalAlignment="Left" Margin="373,346,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textPantDirAva" HorizontalAlignment="Left" Margin="373,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtPantEsq" Content="{x:Static resources:Idioma.txtPantEsq}" HorizontalAlignment="Left" Margin="495,346,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textPantEsqAva" HorizontalAlignment="Left" Margin="495,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtObservacao" Content="{x:Static resources:Idioma.txtObservacao}" HorizontalAlignment="Left" Margin="122,420,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textObservacoesAva" HorizontalAlignment="Left" Margin="122,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" Height="85"/>
-        <Button x:Name="txtSalvar" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="780,480,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarAva_Click"/>
-        <Label x:Name="txtMassaMag" Content="{x:Static resources:Idioma.txtMassaMag}" HorizontalAlignment="Left" Margin="642,249,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textMassMagAva" HorizontalAlignment="Left" Margin="642,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtMassaGor" Content="{x:Static resources:Idioma.txtMassaGor}" HorizontalAlignment="Left" Margin="770,249,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textMassGorAva" HorizontalAlignment="Left" Margin="770,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtPercGor" Content="{x:Static resources:Idioma.txtPercGor}" HorizontalAlignment="Left" Margin="892,249,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textGorduraAva" HorizontalAlignment="Left" Margin="892,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtPesoIdeal" Content="{x:Static resources:Idioma.txtPesoIdeal}" HorizontalAlignment="Left" Margin="702,311,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textPesIdeaAva" HorizontalAlignment="Left" Margin="702,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
-        <Label x:Name="txtImc" Content="{x:Static resources:Idioma.txtImc}" HorizontalAlignment="Left" Margin="830,311,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textIMCAva" HorizontalAlignment="Left" Margin="830,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtData" Content="{x:Static resources:Idioma.txtData}" HorizontalAlignment="Left" Margin="90,144,0,0" VerticalAlignment="Top" Width="161"/>
+        <DatePicker x:Name="textdataAva" TabIndex="4" HorizontalAlignment="Left" Margin="90,170,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label x:Name="txtPeso" Content="{x:Static resources:Idioma.txtPeso}" HorizontalAlignment="Left" Margin="268,144,0,0" VerticalAlignment="Top" Height="32" Width="97"/>
+        <TextBox x:Name="textPesoAva" TabIndex="5" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="268,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtAltura" Content="{x:Static resources:Idioma.txtAltura}" HorizontalAlignment="Left" Margin="383,144,0,0" VerticalAlignment="Top" Height="32" Width="140"/>
+        <TextBox x:Name="TextAlturaAva" TabIndex="6" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="387,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="22"/>
+        <Label x:Name="txtTorax" Content="{x:Static resources:Idioma.txtTorax}" HorizontalAlignment="Left" Margin="90,215,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox x:Name="texttoraxAva" TabIndex="10" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="90,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtCintura" Content="{x:Static resources:Idioma.txtCintura}" HorizontalAlignment="Left" Margin="213,215,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBox x:Name="textCinturaAva" TabIndex="11" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="213,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtQuadril" Content="{x:Static resources:Idioma.txtQuadril}" HorizontalAlignment="Left" Margin="341,215,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="textquadrilAva" TabIndex="12" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="341,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtAntDir" Content="{x:Static resources:Idioma.txtAntDir}" HorizontalAlignment="Left" Margin="90,279,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textAntDirAva" TabIndex="15" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="90,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtAntEsq" Content="{x:Static resources:Idioma.txtAntEsq}" HorizontalAlignment="Left" Margin="213,279,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textAntEsqAva" TabIndex="16" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="213,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtBicDir" Content="{x:Static resources:Idioma.txtBicDir}" HorizontalAlignment="Left" Margin="341,279,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBicDirAva" TabIndex="17" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="341,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtBicEsq" Content="{x:Static resources:Idioma.txtBicEsq}" HorizontalAlignment="Left" Margin="463,279,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBicEsqAva" TabIndex="18" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="463,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtCoxaDir" Content="{x:Static resources:Idioma.txtCoxaDir}" HorizontalAlignment="Left" Margin="90,341,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textCoxDirAva" TabIndex="19" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="90,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtCoxaEsq" Content="{x:Static resources:Idioma.txtCoxaEsq}" HorizontalAlignment="Left" Margin="213,341,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textCoxEsqAva" TabIndex="20" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="213,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtPantDir" Content="{x:Static resources:Idioma.txtPantDir}" HorizontalAlignment="Left" Margin="341,341,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textPantDirAva" TabIndex="21" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="341,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtPantEsq" Content="{x:Static resources:Idioma.txtPantEsq}" HorizontalAlignment="Left" Margin="463,341,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textPantEsqAva" TabIndex="22" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="463,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtObservacao" Content="{x:Static resources:Idioma.txtObservacao}" HorizontalAlignment="Left" Margin="90,415,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textObservacoesAva" TabIndex="23" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="90,441,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" Height="85"/>
+        <Button x:Name="txtSalvar" TabIndex="24" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="780,480,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarAva_Click"/>
+        <Label x:Name="txtMassaMag" Content="{x:Static resources:Idioma.txtMassaMag}" HorizontalAlignment="Left" Margin="510,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textMassMagAva" TabIndex="7" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="510,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtMassaGor" Content="{x:Static resources:Idioma.txtMassaGor}" HorizontalAlignment="Left" Margin="638,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textMassGorAva" TabIndex="8" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="638,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtPercGor" Content="{x:Static resources:Idioma.txtPercGor}" HorizontalAlignment="Left" Margin="760,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textGorduraAva" TabIndex="9" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="760,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtPesoIdeal" Content="{x:Static resources:Idioma.txtPesoIdeal}" HorizontalAlignment="Left" Margin="466,215,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textPesIdeaAva" TabIndex="13" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="466,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
+        <Label x:Name="txtImc" Content="{x:Static resources:Idioma.txtImc}" HorizontalAlignment="Left" Margin="594,215,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textIMCAva" TabIndex="14" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus"  HorizontalAlignment="Left" Margin="594,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="22"/>
     </Grid>
 </Page>
