@@ -9,21 +9,21 @@
       Title="LogradouroPag" Height="578" Width="1006">
 
     <Grid Background="#FFB5B5B5">
-        <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="139,101,0,0" VerticalAlignment="Top" Height="32" Width="103"/>
-        <TextBox x:Name="textId" HorizontalAlignment="Left" Margin="139,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
-        <Label x:Name="txtCep" Content="{x:Static resources:Idioma.txtCep}" HorizontalAlignment="Left" Margin="310,101,0,0" VerticalAlignment="Top" Height="32" Width="166"/>
-        <TextBox x:Name="textCep" HorizontalAlignment="Left" Margin="314,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
-        <Label x:Name="txtLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="588,101,0,0" VerticalAlignment="Top" Height="32" Width="233"/>
-        <TextBox x:Name="textLogradouro" HorizontalAlignment="Left" Margin="592,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="23"/>
-        <Label x:Name="txtBairro" Content="{x:Static resources:Idioma.txtBairro}" HorizontalAlignment="Left" Margin="136,185,0,0" VerticalAlignment="Top" Height="32" Width="214"/>
-        <TextBox x:Name="textBairro" HorizontalAlignment="Left" Margin="139,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Height="23"/>
+        <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="91,101,0,0" VerticalAlignment="Top" Height="32" Width="103"/>
+        <TextBox x:Name="textId" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
+        <Label x:Name="txtCep" Content="{x:Static resources:Idioma.txtCep}" HorizontalAlignment="Left" Margin="286,101,0,0" VerticalAlignment="Top" Height="32" Width="166"/>
+        <TextBox x:Name="textCep" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="286,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <Label x:Name="txtLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="555,101,0,0" VerticalAlignment="Top" Height="32" Width="232"/>
+        <TextBox x:Name="textLogradouro" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="555,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="23"/>
+        <Label x:Name="txtBairro" Content="{x:Static resources:Idioma.txtBairro}" HorizontalAlignment="Left" Margin="91,177,0,0" VerticalAlignment="Top" Height="32" Width="214"/>
+        <TextBox x:Name="textBairro" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Height="23"/>
         <Label x:Name="txtLogradouroh1" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Label x:Name="txtCidade" Content="{x:Static resources:Idioma.txtCidade}" HorizontalAlignment="Left" Margin="512,185,0,0" VerticalAlignment="Top" Height="32" Width="221"/>
-        <Label x:Name="txtUf" Content="{x:Static resources:Idioma.txtUf}" HorizontalAlignment="Left" Margin="137,0,0,0" VerticalAlignment="Center" Height="32" Width="169"/>
-        <Label x:Name="txtPais" Content="{x:Static resources:Idioma.txtPais}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="350"/>
-        <ComboBox x:Name="textCidade" HorizontalAlignment="Left" Margin="518,212,0,0" VerticalAlignment="Top" Width="430" Height="23"/>
-        <ComboBox x:Name="textPais" HorizontalAlignment="Left" Margin="328,306,0,0" VerticalAlignment="Top" Width="618" Height="24"/>
-        <ComboBox x:Name="textUf" HorizontalAlignment="Left" Margin="139,306,0,0" VerticalAlignment="Top" Width="156" Height="24"/>
+        <Label x:Name="txtCidade" Content="{x:Static resources:Idioma.txtCidade}" HorizontalAlignment="Left" Margin="463,177,0,0" VerticalAlignment="Top" Height="32" Width="221"/>
+        <Label x:Name="txtUf" Content="{x:Static resources:Idioma.txtUf}" HorizontalAlignment="Left" Margin="91,244,0,0" VerticalAlignment="Top" Height="33" Width="169"/>
+        <Label x:Name="txtPais" Content="{x:Static resources:Idioma.txtPais}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Width="350" Margin="281,244,0,0"/>
+        <ComboBox x:Name="textCidade" TabIndex="4" HorizontalAlignment="Left" Margin="463,204,0,0" VerticalAlignment="Top" Width="448" Height="23"/>
+        <ComboBox x:Name="textPais" TabIndex="6" HorizontalAlignment="Left" Margin="281,0,0,0" VerticalAlignment="Center" Width="630" Height="24"/>
+        <ComboBox x:Name="textUf" TabIndex="5" HorizontalAlignment="Left" Margin="91,0,0,0" VerticalAlignment="Center" Width="156" Height="24"/>
         <Button x:Name="txtSalvar" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="780,480,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarLog_Click"/>
     </Grid>
 </Page>

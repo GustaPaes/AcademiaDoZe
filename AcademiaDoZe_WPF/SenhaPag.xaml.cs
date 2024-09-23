@@ -25,5 +25,15 @@ namespace AcademiaDoZe_WPF
         {
             MessageBox.Show("Senha salva com successo!");
         }
+
+        private void Box_GotFocus(object sender, RoutedEventArgs e)
+        {
+            ClassFuncoes.Box_GotFocus(sender, e);
+        }
+
+        private void Box_LostFocus(object sender, RoutedEventArgs e)
+        {
+            ClassFuncoes.Box_LostFocus(sender, e);
+        }
     }
 }

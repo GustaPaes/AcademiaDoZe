@@ -14,13 +14,13 @@
             <ColumnDefinition Width="373*"/>
             <ColumnDefinition Width="387*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="txtSalvar" Grid.Column="1" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="97,303,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="88" Click="Button_Click" />
-        <ComboBox x:Name="comboBoxIdioma" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="81,158,0,0" VerticalAlignment="Top" Width="120">
+        <Button x:Name="txtSalvar" TabIndex="1" Grid.Column="1" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="78,261,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="123" Click="Button_Click" Height="74" />
+        <ComboBox x:Name="comboBoxIdioma" TabIndex="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="73,158,0,0" VerticalAlignment="Top" Width="128">
             <System:String>pt-BR</System:String>
             <System:String>en-US</System:String>
             <System:String>es-ES</System:String>
         </ComboBox>
-        <Label x:Name="txtIdioma" Grid.Column="1" Content="{x:Static resources:Idioma.txtIdioma}" HorizontalAlignment="Left" Margin="81,132,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="txtIdioma" Grid.Column="1" Content="{x:Static resources:Idioma.txtIdioma}" HorizontalAlignment="Left" Margin="73,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.686,0.548"/>
 
 
 
