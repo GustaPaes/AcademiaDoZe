@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AcademiaDoZe_WPF"
       xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
       Title="AlunoPag" Height="578" Width="1006">
 
@@ -30,7 +31,7 @@
         <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="91,82,0,0" VerticalAlignment="Top" Height="32" Width="116"/>
         <TextBox x:Name="textIdAlu" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="22"/>
         <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="262,82,0,0" VerticalAlignment="Top" Height="32" Width="193"/>
-        <TextBox x:Name="TextCpfAlu" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="266,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="22"/>
+        <xctk:MaskedTextBox Mask="000\.000\.000\-00" x:Name="TextCpfAlu" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="266,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="22"/>
         <Label x:Name="txtTelefone" Content="{x:Static resources:Idioma.txtTelefone}" HorizontalAlignment="Left" Margin="540,82,0,0" VerticalAlignment="Top" Height="32" Width="200"/>
         <TextBox x:Name="textFoneAlu" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="544,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="22"/>
         <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="88,136,0,0" VerticalAlignment="Top" Height="32" Width="232"/>

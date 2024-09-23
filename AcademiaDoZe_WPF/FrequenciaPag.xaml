@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AcademiaDoZe_WPF"
       xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
       Title="FrequenciaPag" Height="578" Width="1006">
 
@@ -13,7 +14,7 @@
         <Label x:Name="txtIdAluno" Content="{x:Static resources:Idioma.txtIdAluno}" HorizontalAlignment="Left" Margin="91,97,0,0" VerticalAlignment="Top" Height="32" Width="105"/>
         <TextBox x:Name="textIdAluno" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="22"/>
         <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="267,97,0,0" VerticalAlignment="Top" Height="32" Width="229"/>
-        <TextBox x:Name="textCpf" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="271,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" Height="22"/>
+        <xctk:MaskedTextBox Mask="000\.000\.000\-00" x:Name="textCpf" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="271,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" Height="22"/>
         <Label x:Name="txtEntrada" Content="{x:Static resources:Idioma.txtEntrada}" HorizontalAlignment="Left" Margin="91,168,0,0" VerticalAlignment="Top" Width="126"/>
         <DatePicker x:Name="textEntrada" TabIndex="2" HorizontalAlignment="Left" Margin="91,194,0,0" VerticalAlignment="Top" Width="146"/>
         <Label x:Name="txtSaida" Content="{x:Static resources:Idioma.txtSaida}" HorizontalAlignment="Left" Margin="271,168,0,0" VerticalAlignment="Top" Width="104"/>

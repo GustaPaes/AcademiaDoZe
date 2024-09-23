@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe_WPF"
-      xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+        xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MatriculaPag" Height="578" Width="1006">
     <Grid Background="#FFB5B5B5">
@@ -15,7 +16,7 @@
         <Label x:Name="txtIdAluno" Content="{x:Static resources:Idioma.txtIdAluno}" HorizontalAlignment="Left" Margin="243,82,0,0" VerticalAlignment="Top" Height="32" Width="133"/>
         <TextBox x:Name="TextIdAluMat" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="247,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="22"/>
         <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="491,82,0,0" VerticalAlignment="Top" Height="32" Width="141"/>
-        <TextBox x:Name="textCpfAluMat" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="495,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" Height="22"/>
+        <xctk:MaskedTextBox Mask="000\.000\.000\-00" x:Name="textCpfAluMat" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="495,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" Height="22"/>
         <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="88,136,0,0" VerticalAlignment="Top" Height="32" Width="221"/>
         <TextBox x:Name="textNomeAluMat" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="719" Height="22"/>
         <StackPanel x:Name="StackpanelCol2" HorizontalAlignment="Left" Height="110" Margin="88,231,0,0" VerticalAlignment="Top" Width="95">

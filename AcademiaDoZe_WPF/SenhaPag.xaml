@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AcademiaDoZe_WPF"
       xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
       Title="SenhaPag" Height="578" Width="1006">
 
@@ -14,7 +15,7 @@
         <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="91,100,0,0" VerticalAlignment="Top" Height="32" Width="104"/>
         <TextBox x:Name="textIdSen" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="22"/>
         <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="262,100,0,0" VerticalAlignment="Top" Height="32" Width="125"/>
-        <TextBox x:Name="TextCpfSen" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="266,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Height="22"/>
+        <xctk:MaskedTextBox Mask="000\.000\.000\-00" x:Name="TextCpfSen" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="266,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Height="22"/>
         <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="88,154,0,0" VerticalAlignment="Top" Height="32" Width="176"/>
         <TextBox x:Name="textNomeSen" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" Height="22"/>
         <Label x:Name="txtSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="91,209,0,0" VerticalAlignment="Top" Width="104"/>
