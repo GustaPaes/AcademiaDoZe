@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace AcademiaDoZe_WPF
 {
@@ -22,6 +24,36 @@ namespace AcademiaDoZe_WPF
             Home h = new Home();
             h.Show();
             this.Close();
+        }
+
+        private void Box_GotFocus(object sender, RoutedEventArgs e)
+        {
+            var cor = Brushes.LightCyan;
+            if (sender is TextBox)
+            {
+                TextBox textBox = (TextBox)sender;
+                textBox.Background = cor;
+            }
+            else if (sender is PasswordBox)
+            {
+                PasswordBox passwordBox = (PasswordBox)sender;
+                passwordBox.Background = cor;
+            }
+        }
+
+        private void Box_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var cor = Brushes.White;
+            if (sender is TextBox)
+            {
+                TextBox textBox = (TextBox)sender;
+                textBox.Background = cor;
+            }
+            else if (sender is PasswordBox)
+            {
+                PasswordBox passwordBox = (PasswordBox)sender;
+                passwordBox.Background = cor;
+            }
         }
     }
 }

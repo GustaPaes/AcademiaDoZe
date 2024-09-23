@@ -16,13 +16,13 @@
             <RowDefinition Height="16*"/>
             <RowDefinition Height="201*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="txtLogar" Content="Logar" HorizontalAlignment="Left" Margin="133,276,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click" Height="72" Width="136"/>
-        <TextBox x:Name="Senha" HorizontalAlignment="Left" Margin="108,232,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20"/>
-        <TextBox x:Name="Cpf" HorizontalAlignment="Left" Margin="108,158,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="20"/>
+        <Button x:Name="txtLogar" Content="Logar" HorizontalAlignment="Left" Margin="128,273,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click" Height="72" Width="136"/>
+        <PasswordBox x:Name="Senha" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="108,226,0,0" Grid.Row="1" VerticalAlignment="Top" Width="176" Height="22"/>
+        <TextBox x:Name="Cpf" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="108,159,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="22"/>
         <Image x:Name="Imagem" Margin="201,10,318,305" Source="/Image1.png" Stretch="Fill" Grid.RowSpan="2"/>
         <Label x:Name="txtAcademia" Content="Academia do Zé" HorizontalAlignment="Left" Margin="131,75,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="108,125,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Width="200"/>
-        <Label x:Name="txtSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="108,207,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Width="266" Grid.ColumnSpan="2"/>
+        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="108,126,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Width="200"/>
+        <Label x:Name="txtSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="108,199,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="13" Width="266" Grid.ColumnSpan="2"/>
         <Image Margin="141,15,73,288" Source="/logo.png" Stretch="Fill" Grid.RowSpan="2"/>
 
     </Grid>
