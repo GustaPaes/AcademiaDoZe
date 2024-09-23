@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AcademiaDoZe_WPF"
       xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"
       Title="LogradouroPag" Height="578" Width="1006">
 
@@ -12,7 +13,7 @@
         <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="91,101,0,0" VerticalAlignment="Top" Height="32" Width="103"/>
         <TextBox x:Name="textId" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
         <Label x:Name="txtCep" Content="{x:Static resources:Idioma.txtCep}" HorizontalAlignment="Left" Margin="286,101,0,0" VerticalAlignment="Top" Height="32" Width="166"/>
-        <TextBox x:Name="textCep" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="286,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <xctk:MaskedTextBox Mask="00000\-000" x:Name="textCep" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="286,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
         <Label x:Name="txtLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="555,101,0,0" VerticalAlignment="Top" Height="32" Width="232"/>
         <TextBox x:Name="textLogradouro" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="555,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="23"/>
         <Label x:Name="txtBairro" Content="{x:Static resources:Idioma.txtBairro}" HorizontalAlignment="Left" Margin="91,177,0,0" VerticalAlignment="Top" Height="32" Width="214"/>

@@ -79,7 +79,9 @@ class ClassFuncoes
             // verifica se é window e fecha
             if (sender is Window window)
             {
-                window.Close();
+                MessageBoxResult result = MessageBox.Show("Você realmente deseja fechar a aplicação?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                    window.Close();
             }
             // carrega uma página inicial
             else

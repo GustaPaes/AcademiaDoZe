@@ -11,7 +11,7 @@
 
     <Grid Background="#FFB5B5B5">
         <Label x:Name="txtCep" Content="{x:Static resources:Idioma.txtCep}" HorizontalAlignment="Left" Margin="88,263,0,0" VerticalAlignment="Top" Height="32" Width="207"/>
-        <TextBox x:Name="TextCepAlu" TabIndex="6" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="92,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
+        <xctk:MaskedTextBox Mask="00000\-000" x:Name="TextCepAlu" TabIndex="6" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="92,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="23"/>
         <Label x:Name="txtLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="364,262,0,0" VerticalAlignment="Top" Height="32" Width="225"/>
         <TextBox x:Name="textLogradouroAlu" TabIndex="7" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus"  HorizontalAlignment="Left" Margin="368,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="530" Height="23"/>
         <Label x:Name="txtBairro" Content="{x:Static resources:Idioma.txtBairro}" HorizontalAlignment="Left" Margin="89,326,0,0" VerticalAlignment="Top" Height="32" Width="269"/>

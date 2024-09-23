@@ -13,7 +13,7 @@
         <Label x:Name="txtIdEndereco" Content="{x:Static resources:Idioma.txtIdEnd}" HorizontalAlignment="Left" Margin="92,271,0,0" VerticalAlignment="Top" Height="32" Width="145"/>
         <TextBox x:Name="textIdEndereco" TabIndex="6" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus"  HorizontalAlignment="Left" Margin="91,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="23"/>
         <Label x:Name="txtCep" Content="{x:Static resources:Idioma.txtCep}" HorizontalAlignment="Left" Margin="263,271,0,0" VerticalAlignment="Top" Height="32" Width="208"/>
-        <TextBox x:Name="textCep" TabIndex="7" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="267,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="23"/>
+        <xctk:MaskedTextBox Mask="00000\-000" TabIndex="7" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="267,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="23"/>
         <Label x:Name="txtLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="494,271,0,0" VerticalAlignment="Top" Height="32" Width="244"/>
         <TextBox x:Name="textLogradouro" TabIndex="8" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="494,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="313" Height="23"/>
         <Label x:Name="txtBairro" Content="{x:Static resources:Idioma.txtBairro}" HorizontalAlignment="Left" Margin="89,334,0,0" VerticalAlignment="Top" Height="32" Width="244"/>
@@ -35,7 +35,7 @@
         <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="262,90,0,0" VerticalAlignment="Top" Height="32" Width="142"/>
         <xctk:MaskedTextBox Mask="000\.000\.000\-00" x:Name="textCpf" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="266,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="22"/>
         <Label x:Name="txtTelefone" Content="{x:Static resources:Idioma.txtTelefone}" HorizontalAlignment="Left" Margin="540,90,0,0" VerticalAlignment="Top" Height="32" Width="209"/>
-        <TextBox x:Name="textTelefone" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="544,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="22"/>
+        <xctk:MaskedTextBox Mask="(000) 0000-0000" x:Name="textTelefone" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="544,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="22"/>
         <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="88,144,0,0" VerticalAlignment="Top" Height="32" Width="245"/>
         <TextBox x:Name="textNome" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="716" Height="22"/>
         <Label x:Name="txtNascimento" Content="{x:Static resources:Idioma.txtNascimento}" HorizontalAlignment="Left" Margin="91,214,0,0" VerticalAlignment="Top" Width="170"/>
