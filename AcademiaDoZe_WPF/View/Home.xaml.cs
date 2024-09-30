@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 
-namespace AcademiaDoZe_WPF
+namespace AcademiaDoZe_WPF.View
 {
     /// <summary>
     /// Lógica interna para Home.xaml

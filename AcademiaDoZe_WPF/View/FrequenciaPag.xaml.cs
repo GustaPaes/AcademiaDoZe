@@ -1,16 +1,15 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 
-namespace AcademiaDoZe_WPF
+namespace AcademiaDoZe_WPF.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interação lógica para FrequenciaPag.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class FrequenciaPag : Page
     {
-        public MainWindow()
+        public FrequenciaPag()
         {
             InitializeComponent();
 
@@ -20,14 +19,12 @@ namespace AcademiaDoZe_WPF
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ClassFuncoes.AjustaResources(this);
+            ClassFuncoes.AjustaResources(this);        
         }
 
-        public void Button_Click(object sender, RoutedEventArgs e)
+        private void salvarFreqClick(object sender, RoutedEventArgs e)
         {
-            Home h = new Home();
-            h.Show();
-            this.Close();
+            MessageBox.Show("Frquência salva com sucesso!");
         }
 
         private void Box_GotFocus(object sender, RoutedEventArgs e)

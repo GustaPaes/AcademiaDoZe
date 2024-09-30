@@ -2,28 +2,29 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace AcademiaDoZe_WPF
+namespace AcademiaDoZe_WPF.View
 {
     /// <summary>
-    /// Interação lógica para AlunoPag.xam
+    /// Lógica interna para MatriculaPag.xaml
     /// </summary>
-    public partial class AlunoPag : Page
+    public partial class MatriculaPag : Page
     {
-        public AlunoPag()
+        public MatriculaPag()
         {
             InitializeComponent();
 
             this.Loaded += Page_Loaded;
             this.PreviewKeyDown += new KeyEventHandler(ClassFuncoes.Window_KeyDown);
         }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ClassFuncoes.AjustaResources(this);
         }
 
-        private void salvarLog_Click(object sender, RoutedEventArgs e)
+        private void salvarMat_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Aluno salvo com successo!");
+            MessageBox.Show("Matrícula salva com sucesso!");
         }
 
         private void Box_GotFocus(object sender, RoutedEventArgs e)

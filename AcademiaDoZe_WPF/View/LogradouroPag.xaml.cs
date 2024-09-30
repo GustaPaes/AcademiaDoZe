@@ -2,14 +2,14 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace AcademiaDoZe_WPF
+namespace AcademiaDoZe_WPF.View
 {
     /// <summary>
-    /// Interação lógica para FrequenciaPag.xam
+    /// Interação lógica para LogradouroPag.xam
     /// </summary>
-    public partial class FrequenciaPag : Page
+    public partial class LogradouroPag : Page
     {
-        public FrequenciaPag()
+        public LogradouroPag()
         {
             InitializeComponent();
 
@@ -19,12 +19,12 @@ namespace AcademiaDoZe_WPF
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ClassFuncoes.AjustaResources(this);        
+            ClassFuncoes.AjustaResources(this);
         }
 
-        private void salvarFreqClick(object sender, RoutedEventArgs e)
+        private void salvarLog_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Frquência salva com sucesso!");
+            MessageBox.Show("Logradouro salvo com successo!");
         }
 
         private void Box_GotFocus(object sender, RoutedEventArgs e)
