@@ -34,7 +34,7 @@ namespace AcademiaDoZe_WPF.View
 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            Home h = new Home();
+            Home h = new Home(ProviderName, ConnectionString);
             h.Show();
             this.Close();
         }

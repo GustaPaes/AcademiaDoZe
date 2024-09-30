@@ -9,8 +9,14 @@ namespace AcademiaDoZe_WPF.View
     /// </summary>
     public partial class Home : Window
     {
-        public Home()
+        private string ConnectionString { get; set; }
+        private string ProviderName { get; set; }
+
+        public Home(string providerName, string connectionString)
         {
+            ConnectionString = connectionString;
+            ProviderName = providerName;
+
             InitializeComponent();
 
             this.Loaded += Page_Loaded;
@@ -31,7 +37,7 @@ namespace AcademiaDoZe_WPF.View
 
         private void Logradourobtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new LogradouroPag());
+            mainFrame.Navigate(new PageListaLogradouro(ProviderName, ConnectionString));
         }
 
         private void AlunoBtn_Click(object sender, RoutedEventArgs e)
