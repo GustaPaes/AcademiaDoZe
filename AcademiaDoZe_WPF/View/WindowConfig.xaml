@@ -31,7 +31,7 @@
         </ComboBox>
         <Label x:Name="labelStrConexao" Content="String de Conexão:" HorizontalAlignment="Left" Margin="19,155,0,0" VerticalAlignment="Top" Height="26" Width="130" Grid.Column="2"/>
         <TextBox x:Name="textBoxStringDeConexao" Text="Server=localhost;Database=db_academia;Uid=coelho;Pwd=abcBolinhas12345;TrustServerCertificate=True;" HorizontalAlignment="Left" Margin="19,186,0,0" VerticalAlignment="Top" Width="389" Grid.Column="2" Height="18" />
-        <Button x:Name="salvaBD" Content="Salvar BD" HorizontalAlignment="Left" Margin="20,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="170" Click="SalvaBD_Click" Grid.Column="2" Height="56"/>
+        <Button x:Name="salvaBD" Content="Salvar DB" HorizontalAlignment="Left" Margin="20,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="170" Click="SalvaDB_Click" Grid.Column="2" Height="56"/>
         <Button x:Name="encerrarAplicacao" Content="Encerrar Aplicação" HorizontalAlignment="Left" Margin="238,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="170" Click="EncerrarAplicacao_Click" Grid.Column="2" Height="56" />
     </Grid>
 </Window>

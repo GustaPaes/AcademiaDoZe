@@ -1,5 +1,5 @@
 ﻿namespace AcademiaDoZe_WPF.Model;
-public class Logradouro
+public class Logradouro : ICloneable
 {
     public int Id { get; set; }
     public string Cep { get; set; }
@@ -8,6 +8,7 @@ public class Logradouro
     public string Cidade { get; set; }
     public string Bairro { get; set; }
     public string Nome { get; set; }
+
     public Logradouro(int id = 0, string cep = "", string pais = "", string uf = "", string cidade = "", string bairro = "", string nome = "")
     {
         Id = id;
@@ -17,5 +18,10 @@ public class Logradouro
         Cidade = cidade;
         Bairro = bairro;
         Nome = nome;
+    }
+
+    public object Clone()
+    {
+        return this.MemberwiseClone();
     }
 }

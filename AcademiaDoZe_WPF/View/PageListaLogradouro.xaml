@@ -4,21 +4,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:AcademiaDoZe_WPF.View"
+        xmlns:viewModel="clr-namespace:AcademiaDoZe_WPF.ViewModel"
         mc:Ignorable="d"
-        d:DesignHeight="450" d:DesignWidth="800"
+        d:DesignHeight="646.25" d:DesignWidth="800"
         Title="PageListaLogradouro">
+
+    <Page.DataContext>
+        <viewModel:LogradouroViewModel/>
+    </Page.DataContext>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <Button x:Name="buttonNovo" Margin="3" Padding="3" Content="Novo" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}"
-Click="ButtonNovo_Click"/>
-            <Button x:Name="buttonEditar" Margin="3" Padding="3" Content="Editar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" />
-            <Button x:Name="buttonExcluir" Margin="3" Padding="3" Content="Deletar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" />
+
+        <GroupBox Header="" Margin="10" Grid.Row="0">
+            <Grid Height="300">
+                <Label x:Name="labelAtiva" Content="Cadastrar Logradouro" HorizontalAlignment="left" Margin="10,10,0,0" VerticalAlignment="Top" BorderBrush="#FF4A1E1E" Foreground="White" FontSize="20"/>
+                <local:UserControlLogradouro Height="169" Width="566"/>
+            </Grid>
+        </GroupBox>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="buttonNovo" Margin="3" Padding="3" CommandParameter="{Binding}" Command="{Binding LogradouroAdicionarCommand}" Content="Novo" Background="#FF1A1A1A" Foreground="#FFFDFDFD" 
+                    Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Button x:Name="buttonEditar" Margin="3" Padding="3" CommandParameter="{Binding}" Command="{Binding LogradouroAtualizarCommand}" Content="Editar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" 
+                    Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Button x:Name="buttonExcluir" Margin="3" Padding="3" CommandParameter="{Binding}" Command="{Binding LogradouroRemoverCommand}" Content="Deletar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" 
+                    Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
         </StackPanel>
-        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+        
+        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
             <DataGrid ItemsSource="{Binding Logradouros}" SelectedItem="{Binding SelectedLogradouro}" AutoGenerateColumns="False" IsReadOnly="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Id" Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>

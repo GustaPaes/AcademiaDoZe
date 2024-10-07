@@ -20,11 +20,11 @@
         <Label x:Name="txtBairro" Content="{x:Static resources:Idioma.txtBairro}" HorizontalAlignment="Left" Margin="91,177,0,0" VerticalAlignment="Top" Height="32" Width="214"/>
         <TextBox x:Name="textBairro" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Height="23"/>
         <Label x:Name="txtLogradouroh1" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Label x:Name="txtCidade" Content="{x:Static resources:Idioma.txtCidade}" HorizontalAlignment="Left" Margin="463,177,0,0" VerticalAlignment="Top" Height="32" Width="221"/>
+        <Label x:Name="txtCidade" Content="{x:Static resources:Idioma.txtCidade}" HorizontalAlignment="Left" Margin="281,244,0,0" VerticalAlignment="Top" Height="32" Width="221"/>
         <Label x:Name="txtUf" Content="{x:Static resources:Idioma.txtUf}" HorizontalAlignment="Left" Margin="91,244,0,0" VerticalAlignment="Top" Height="33" Width="169"/>
-        <Label x:Name="txtPais" Content="{x:Static resources:Idioma.txtPais}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Width="350" Margin="281,244,0,0"/>
-        <ComboBox x:Name="textCidade" TabIndex="4" HorizontalAlignment="Left" Margin="463,204,0,0" VerticalAlignment="Top" Width="448" Height="23"/>
-        <ComboBox x:Name="textPais" TabIndex="6" HorizontalAlignment="Left" Margin="281,0,0,0" VerticalAlignment="Center" Width="630" Height="24" SelectionChanged="textPais_SelectionChanged">
+        <Label x:Name="txtPais" Content="{x:Static resources:Idioma.txtPais}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Width="350" Margin="452,175,0,0"/>
+        <ComboBox x:Name="textCidade" TabIndex="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="448" Height="24"/>
+        <ComboBox x:Name="textPais" TabIndex="6" HorizontalAlignment="Left" Margin="452,204,0,0" VerticalAlignment="Top" Width="275" Height="23" SelectionChanged="textPais_SelectionChanged">
             <System:String>Brasil</System:String>
         </ComboBox>
         <ComboBox x:Name="textUf" TabIndex="5" HorizontalAlignment="Left" Margin="91,0,0,0" VerticalAlignment="Center" Width="156" Height="24" SelectionChanged="textUf_SelectionChanged"/>

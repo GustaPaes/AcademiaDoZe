@@ -1,9 +1,14 @@
-﻿using AcademiaDoZe_WPF.Model;
+﻿using AcademiaDoZe_WPF.DataAccess;
+using AcademiaDoZe_WPF.Model;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.Common;
+using System.Windows;
+using System.Windows.Input;
+
 namespace AcademiaDoZe_WPF.ViewModel;
-public class LogradouroViewModel : INotifyPropertyChanged
+
+public class LogradouroViewModel : ViewModelBase
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -18,11 +23,37 @@ public class LogradouroViewModel : INotifyPropertyChanged
 
     public Logradouro SelectedLogradouro
     {
-        get => _selectedLogradouro; set
+        get { return _selectedLogradouro; }
+        set
         {
             _selectedLogradouro = value;
-            OnPropertyChanged(nameof(SelectedLogradouro));
+            OnPropertyChanged("SelectedLogradouro");
         }
+    }
+
+    private LogradouroRepository _repository;
+
+    public ICommand LogradouroAdicionarCommand { get; set; }
+    public ICommand LogradouroAtualizarCommand { get; set; }
+    public ICommand LogradouroRemoverCommand { get; set; }
+
+    public LogradouroViewModel()
+    {
+        Logradouros = new ObservableCollection<Logradouro>();
+        _repository = new LogradouroRepository();
+
+        LogradouroAdicionarCommand = new RelayCommand(AdicionarLogradouro);
+        LogradouroAtualizarCommand = new RelayCommand(AtualizarLogradouro);
+        LogradouroRemoverCommand = new RelayCommand(RemoverLogradouro);
+
+        GetAll();
+    }
+
+    public void GetAll()
+    {
+        // busca no banco de dados e carrega em Logradouros
+        Logradouros.Clear();
+        _repository.GetAll().ForEach(data => Logradouros.Add(data));
     }
 
     private readonly DbProviderFactory factory;
@@ -161,5 +192,74 @@ public class LogradouroViewModel : INotifyPropertyChanged
         comando.CommandText = @"DELETE FROM tb_logradouro WHERE id_logradouro = @id;";
         //executa o comando no banco de dados
         _ = comando.ExecuteNonQuery();
+    }
+
+    private void AdicionarLogradouro(object obj)
+    {
+        if (SelectedLogradouro == null) return;
+        if (MessageBox.Show("Confirma?", "Logradouro", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+        {
+            try
+            {
+                _repository.Add(SelectedLogradouro);
+                MessageBox.Show("Sucesso.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                GetAll();
+            }
+        }
+    }
+
+    private void AtualizarLogradouro(object obj)
+    {
+        if (SelectedLogradouro == null) return;
+        if (MessageBox.Show("Confirma?", "Logradouro", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+        {
+            try
+            {
+                _repository.Update(SelectedLogradouro);
+
+                MessageBox.Show("Sucesso.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                GetAll();
+            }
+        }
+    }
+
+    private void RemoverLogradouro(object obj)
+    {
+        if (SelectedLogradouro == null) 
+            return;
+
+        if (MessageBox.Show("Confirma?", "Logradouro", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+        {
+            try
+            {
+                _repository.Delete(SelectedLogradouro);
+                MessageBox.Show("Sucesso.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                GetAll();
+            }
+        }
     }
 }

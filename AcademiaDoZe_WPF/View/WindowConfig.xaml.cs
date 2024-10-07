@@ -64,7 +64,7 @@ namespace AcademiaDoZe_WPF.View
             }
         }
 
-        private void SalvaBD_Click(object sender, RoutedEventArgs e)
+        private void SalvaDB_Click(object sender, RoutedEventArgs e)
         {
             try
             {
