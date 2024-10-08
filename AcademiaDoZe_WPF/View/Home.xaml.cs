@@ -37,17 +37,20 @@ namespace AcademiaDoZe_WPF.View
 
         private void Logradourobtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new PageListaLogradouro(ProviderName, ConnectionString));
+            if (mainFrame.Content is not PageListaLogradouro)
+                mainFrame.Content = new PageListaLogradouro(ProviderName, ConnectionString);
         }
 
         private void AlunoBtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new AlunoPag());
+            if (mainFrame.Content is not PageListaAluno)
+                mainFrame.Content = new PageListaAluno();
         }
 
         private void ColaboradorBtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new ColaboradoresPag());
+            if (mainFrame.Content is not PageListaColaborador)
+                mainFrame.Content = new PageListaColaborador();
         }
 
         private void SenhaBtn_Click(object sender, RoutedEventArgs e)

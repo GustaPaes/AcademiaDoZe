@@ -12,11 +12,6 @@ public class LogradouroViewModel : ViewModelBase
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    protected void OnPropertyChanged(string propertyName)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-
     public ObservableCollection<Logradouro> Logradouros { get; set; }
 
     private Logradouro _selectedLogradouro;
@@ -28,23 +23,30 @@ public class LogradouroViewModel : ViewModelBase
         {
             _selectedLogradouro = value;
             OnPropertyChanged("SelectedLogradouro");
+            // libera somente se houver um logradouro selecionado
+            LogradouroAtualizarCommand.RaiseCanExecuteChanged();
+            LogradouroRemoverCommand.RaiseCanExecuteChanged();
+            LogradouroAdicionarCommand.RaiseCanExecuteChanged();
         }
     }
 
     private LogradouroRepository _repository;
 
-    public ICommand LogradouroAdicionarCommand { get; set; }
-    public ICommand LogradouroAtualizarCommand { get; set; }
-    public ICommand LogradouroRemoverCommand { get; set; }
+    public RelayCommand LogradouroAdicionarCommand { get; set; }
+    public RelayCommand LogradouroAtualizarCommand { get; set; }
+    public RelayCommand LogradouroRemoverCommand { get; set; }
+    public RelayCommand FiltrarLogradouroCommand { get; set; }
 
     public LogradouroViewModel()
     {
         Logradouros = new ObservableCollection<Logradouro>();
         _repository = new LogradouroRepository();
 
-        LogradouroAdicionarCommand = new RelayCommand(AdicionarLogradouro);
-        LogradouroAtualizarCommand = new RelayCommand(AtualizarLogradouro);
-        LogradouroRemoverCommand = new RelayCommand(RemoverLogradouro);
+        LogradouroAdicionarCommand = new RelayCommand(AdicionarLogradouro, CanExecuteSubmit);
+        LogradouroAtualizarCommand = new RelayCommand(AtualizarLogradouro, CanExecuteSubmit);
+        LogradouroRemoverCommand = new RelayCommand(RemoverLogradouro, CanExecuteSubmit);
+
+        FiltrarLogradouroCommand = new RelayCommand(FiltrarLogradouro);
 
         GetAll();
     }
@@ -68,7 +70,18 @@ public class LogradouroViewModel : ViewModelBase
         factory = DbProviderFactories.GetFactory(ProviderName);
         // inicializa a lista de logradouros
         Logradouros = new ObservableCollection<Logradouro>();
+        _repository = new LogradouroRepository();
+
+        LogradouroAdicionarCommand = new RelayCommand(AdicionarLogradouro, CanExecuteSubmit);
+        LogradouroAtualizarCommand = new RelayCommand(AtualizarLogradouro, CanExecuteSubmit);
+        LogradouroRemoverCommand = new RelayCommand(RemoverLogradouro, CanExecuteSubmit);
+
+        FiltrarLogradouroCommand = new RelayCommand(FiltrarLogradouro);
+
+        GetAll();
     }
+
+    #region Métodos Publicos
 
     public void Load()
     {
@@ -194,6 +207,25 @@ public class LogradouroViewModel : ViewModelBase
         _ = comando.ExecuteNonQuery();
     }
 
+    #endregion
+
+    #region Métodos Privados
+
+    private void FiltrarLogradouro(object parameter)
+    {
+        string cep = parameter as string;
+        var logradouro = new Logradouro
+        {
+            Cep = cep
+        };
+        SelectedLogradouro = _repository.GetOne(logradouro);
+    }
+
+    private bool CanExecuteSubmit(object parameter)
+    {
+        return SelectedLogradouro != null;
+    }
+
     private void AdicionarLogradouro(object obj)
     {
         if (SelectedLogradouro == null) return;
@@ -262,4 +294,6 @@ public class LogradouroViewModel : ViewModelBase
             }
         }
     }
+
+    #endregion
 }
