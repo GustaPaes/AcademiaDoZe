@@ -1,6 +1,7 @@
 ﻿using System.Data.Common;
 using System.Data.SqlClient;
 using System.Windows;
+using AcademiaDoZe_WPF.Extensions;
 
 namespace AcademiaDoZe_WPF
 {

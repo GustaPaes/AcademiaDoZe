@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Windows;
 using System.Windows.Input;
+using AcademiaDoZe_WPF.Extensions;
 
 namespace AcademiaDoZe_WPF.View
 {

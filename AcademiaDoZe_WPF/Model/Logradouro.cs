@@ -1,4 +1,5 @@
 ﻿namespace AcademiaDoZe_WPF.Model;
+
 public class Logradouro : ICloneable
 {
     public int Id { get; set; }

@@ -1,46 +1,43 @@
-﻿using AcademiaDoZe_WPF.ViewModel;
+﻿using AcademiaDoZe_WPF.Extensions;
+using AcademiaDoZe_WPF.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace AcademiaDoZe_WPF.View
+namespace AcademiaDoZe_WPF.View;
+
+/// <summary>
+/// Interaction logic for PageListaLogradouro.xaml
+/// </summary>
+public partial class PageListaLogradouro : Page
 {
-    /// <summary>
-    /// Interação lógica para PageListaLogradouro.xam
-    /// </summary>
-    public partial class PageListaLogradouro : Page
+    private LogradouroViewModel ViewModelLogradouro;
+
+    public PageListaLogradouro()
     {
-        private string ConnectionString { get; set; }
+        InitializeComponent();
 
-        private string ProviderName { get; set; }
+        this.PreviewKeyDown += new System.Windows.Input.KeyEventHandler(ClassFuncoes.Window_KeyDown);
+        this.Loaded += Page_Loaded;
 
-        private LogradouroViewModel ViewModelLogradouro;
-
-        public PageListaLogradouro(string providerName, string connectionString)
+        try
         {
-            InitializeComponent();
-
-            ConnectionString = connectionString;
-            ProviderName = providerName;
-
-            try
-            {
-                // criação de objeto ViewModel
-                ViewModelLogradouro = new LogradouroViewModel(ProviderName, ConnectionString);
-                // carrega os dados
-                ViewModelLogradouro.Load();
-                // associa o objeto da ViewModel ao DataContext da janela
-                // DataContext é uma propriedade que permite que elementos de interface gráfica sejam associados a objetos de dados
-                DataContext = ViewModelLogradouro;
-            }
-            catch
-            {
-                MessageBox.Show("Erro ao carregar a lista de logradouros!");
-            }
+            ViewModelLogradouro = new LogradouroViewModel();
+            ViewModelLogradouro.GetAll();
+            DataContext = ViewModelLogradouro;
         }
-        private void ButtonNovo_Click(object sender, RoutedEventArgs e)
+        catch
         {
-            NavigationService?.Navigate(new LogradouroPag());
-            //NavigationService?.Navigate(new LogradouroPag(ProviderName, ConnectionString));
+            MessageBox.Show("Erro ao carregar a lista de logradouros!");
         }
+    }
+
+    private void Page_Loaded(object sender, RoutedEventArgs e)
+    {
+        ClassFuncoes.AjustaResources(this);
+    }
+
+    private void ButtonNovo_Click(object sender, RoutedEventArgs e)
+    {
+
     }
 }

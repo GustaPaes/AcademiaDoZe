@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
+using AcademiaDoZe_WPF.Extensions;
 
 namespace AcademiaDoZe_WPF.View
 {
@@ -38,7 +39,7 @@ namespace AcademiaDoZe_WPF.View
         private void Logradourobtn_Click(object sender, RoutedEventArgs e)
         {
             if (mainFrame.Content is not PageListaLogradouro)
-                mainFrame.Content = new PageListaLogradouro(ProviderName, ConnectionString);
+                mainFrame.Content = new PageListaLogradouro();
         }
 
         private void AlunoBtn_Click(object sender, RoutedEventArgs e)

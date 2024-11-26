@@ -1,10 +1,11 @@
-﻿using AcademiaDoZe_WPF.ViewModel;
+﻿using AcademiaDoZe_WPF.Extensions;
+using AcademiaDoZe_WPF.ViewModel;
 using System.Windows;
 
 namespace AcademiaDoZe_WPF.View
 {
     /// <summary>
-    /// Lógica interna para WindowColaborador.xaml
+    /// Interaction logic for WindowColaborador.xaml
     /// </summary>
     public partial class WindowColaborador : Window
     {
@@ -12,7 +13,18 @@ namespace AcademiaDoZe_WPF.View
         {
             InitializeComponent();
 
+            this.PreviewKeyDown += new System.Windows.Input.KeyEventHandler(ClassFuncoes.Window_KeyDown);
+            this.Loaded += Page_Loaded;
+
+            ComboBoxTipo.ItemsSource = Enum.GetValues(typeof(EnumColaboradorTipo));
+            ComboBoxVinculo.ItemsSource = Enum.GetValues(typeof(EnumColaboradorVinculo));
+
             DataContext = new ColaboradorCadastroViewModel();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ClassFuncoes.AjustaResources(this);
         }
     }
 }

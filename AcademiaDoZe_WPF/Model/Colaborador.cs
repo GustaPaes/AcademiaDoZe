@@ -1,4 +1,6 @@
-﻿namespace AcademiaDoZe_WPF.Model;
+﻿using AcademiaDoZe_WPF.Extensions;
+
+namespace AcademiaDoZe_WPF.Model;
 
 public class Colaborador
 {

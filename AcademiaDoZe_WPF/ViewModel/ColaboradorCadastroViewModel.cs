@@ -1,4 +1,5 @@
-﻿using AcademiaDoZe_WPF.Model;
+﻿using AcademiaDoZe_WPF.Extensions;
+using AcademiaDoZe_WPF.Model;
 using System.Windows.Input;
 
 namespace AcademiaDoZe_WPF.ViewModel;
@@ -19,25 +20,20 @@ public class ColaboradorCadastroViewModel : LogradouroViewModel
     public DateTime Admissao { get { return _colaborador.Admissao; } set { _colaborador.Admissao = value; OnPropertyChanged("Admissao"); } }
     public EnumColaboradorTipo Tipo { get { return _colaborador.Tipo; } set { _colaborador.Tipo = value; OnPropertyChanged("Tipo"); } }
     public EnumColaboradorVinculo Vinculo { get { return _colaborador.Vinculo; } set { _colaborador.Vinculo = value; OnPropertyChanged("Vinculo"); } }
-
     public ICommand SalvarColaboradorCommand { get; set; }
-
     public event EventHandler ColaboradorSalvo;
 
     public ColaboradorCadastroViewModel(Colaborador colaborador = null)
     {
         _colaborador = colaborador ?? new Colaborador();
         SalvarColaboradorCommand = new RelayCommand(SalvarColaborador);
-        // selecionar o logradouro conforme o LogradouroId
+
         SelectedLogradouro = Logradouros.FirstOrDefault(l => l.Id == _colaborador.LogradouroId);
     }
-
     private void SalvarColaborador(object obj)
     {
-        // Lógica para salvar
         ColaboradorSalvo?.Invoke(this, EventArgs.Empty);
     }
-
     public Colaborador GetColaborador()
     {
         _colaborador.LogradouroId = SelectedLogradouro.Id;

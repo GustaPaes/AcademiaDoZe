@@ -3,12 +3,18 @@ using AcademiaDoZe_WPF.Model;
 using AcademiaDoZe_WPF.View;
 using System.Collections.ObjectModel;
 using System.Windows;
+
 namespace AcademiaDoZe_WPF.ViewModel;
+
 public class AlunoViewModel : ViewModelBase
 {
-    // Objetos utilizados no Databinding, recurso que permite a sincronização automática entre View e ViewModel, através da propriedade DataContext da View.
-    public ObservableCollection<Aluno> Alunos { get; set; }
     private Aluno _selectedAluno;
+    private AlunoRepository _repository;
+    public ObservableCollection<Aluno> Alunos { get; set; }
+    public RelayCommand AlunoAdicionarCommand { get; set; }
+    public RelayCommand AlunoAtualizarCommand { get; set; }
+    public RelayCommand AlunoRemoverCommand { get; set; }
+
     public Aluno SelectedAluno
     {
         get { return _selectedAluno; }
@@ -16,43 +22,37 @@ public class AlunoViewModel : ViewModelBase
         {
             _selectedAluno = value;
             OnPropertyChanged("SelectedAluno");
-            // libera somente se houver um Aluno selecionado
             AlunoAtualizarCommand.RaiseCanExecuteChanged();
             AlunoRemoverCommand.RaiseCanExecuteChanged();
         }
     }
-    // atributo para acessar o banco de dados
-    private AlunoRepository _repository;
-    // Comandos para o CRUD
-    public RelayCommand AlunoAdicionarCommand { get; set; }
-    public RelayCommand AlunoAtualizarCommand { get; set; }
-    public RelayCommand AlunoRemoverCommand { get; set; }
+    
     public AlunoViewModel()
     {
         Alunos = new ObservableCollection<Aluno>();
         _repository = new AlunoRepository();
-        // Inicializando os comandos
+
         AlunoAdicionarCommand = new RelayCommand(AdicionarAluno);
         AlunoAtualizarCommand = new RelayCommand(AtualizarAluno, CanExecuteSubmit);
         AlunoRemoverCommand = new RelayCommand(RemoverAluno, CanExecuteSubmit);
+
         GetAll();
-    }
-    private bool CanExecuteSubmit(object parameter)
-    {
-        // validação utilizada para liberar ou não os botões de atualizar e remover na view
-        return SelectedAluno != null;
     }
 
     public void GetAll()
     {
-        // busca no banco de dados e carrega em Alunos, limpando antes
         Alunos.Clear();
         _repository.GetAll().ForEach(data => Alunos.Add(data));
     }
 
+    private bool CanExecuteSubmit(object parameter)
+    {
+        return SelectedAluno != null;
+    }
+
     private void AdicionarAluno(object obj)
     {
-        WindowAluno janelaCadastro = new WindowAluno();
+        WindowAluno janelaCadastro = new();
         var viewModel = (AlunoCadastroViewModel)janelaCadastro.DataContext;
         viewModel.AlunoSalvo += (sender, e) =>
         {
@@ -86,7 +86,7 @@ public class AlunoViewModel : ViewModelBase
             {
                 var AlunoEditado = viewModel.GetAluno();
                 _repository.Update(AlunoEditado);
-                //GetAll();
+                GetAll();
                 janelaCadastro.Close();
                 MessageBox.Show("Sucesso.");
             }

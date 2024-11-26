@@ -8,8 +8,15 @@ namespace AcademiaDoZe_WPF.ViewModel;
 
 public class ColaboradorViewModel : ViewModelBase
 {
-    public ObservableCollection<Colaborador> Colaboradors { get; set; }
+    public ObservableCollection<Colaborador> Colaboradores { get; set; }
     private Colaborador _selectedColaborador;
+    private ColaboradorRepository _repository;
+    public event EventHandler? LoginSucceeded;
+    public RelayCommand ColaboradorAdicionarCommand { get; set; }
+    public RelayCommand ColaboradorAtualizarCommand { get; set; }
+    public RelayCommand ColaboradorRemoverCommand { get; set; }
+    public RelayCommand ColaboradorValidaLoginCommand { get; set; }
+
     public Colaborador SelectedColaborador
     {
         get { return _selectedColaborador; }
@@ -17,42 +24,33 @@ public class ColaboradorViewModel : ViewModelBase
         {
             _selectedColaborador = value;
             OnPropertyChanged("SelectedColaborador");
-            // libera somente se houver um Colaborador selecionado
+
             ColaboradorAtualizarCommand.RaiseCanExecuteChanged();
             ColaboradorRemoverCommand.RaiseCanExecuteChanged();
         }
     }
 
-    // atributo para acessar o banco de dados
-    private ColaboradorRepository _repository;
-
-    // Comandos para o CRUD
-    public RelayCommand ColaboradorAdicionarCommand { get; set; }
-    public RelayCommand ColaboradorAtualizarCommand { get; set; }
-    public RelayCommand ColaboradorRemoverCommand { get; set; }
-
     public ColaboradorViewModel()
     {
-        Colaboradors = new ObservableCollection<Colaborador>();
+        Colaboradores = new ObservableCollection<Colaborador>();
         _repository = new ColaboradorRepository();
-        // Inicializando os comandos
+
         ColaboradorAdicionarCommand = new RelayCommand(AdicionarColaborador);
         ColaboradorAtualizarCommand = new RelayCommand(AtualizarColaborador, CanExecuteSubmit);
         ColaboradorRemoverCommand = new RelayCommand(RemoverColaborador, CanExecuteSubmit);
+        ColaboradorValidaLoginCommand = new RelayCommand(ValidaLogin);
+
         GetAll();
     }
-
     private bool CanExecuteSubmit(object parameter)
     {
-        // validação utilizada para liberar ou não os botões de atualizar e remover na view
         return SelectedColaborador != null;
     }
 
     public void GetAll()
     {
-        // busca no banco de dados e carrega em Colaboradors, limpando antes
-        Colaboradors.Clear();
-        _repository.GetAll().ForEach(data => Colaboradors.Add(data));
+        Colaboradores.Clear();
+        _repository.GetAll().ForEach(data => Colaboradores.Add(data));
     }
 
     private void AdicionarColaborador(object obj)
@@ -124,6 +122,43 @@ public class ColaboradorViewModel : ViewModelBase
             {
                 GetAll();
             }
+        }
+    }
+
+    private void ValidaLogin(object obj)
+    {
+        try
+        {
+            var colaborador = new Colaborador
+            {
+                Cpf = "",
+                Senha = ""
+            };
+
+            if (obj is object[] objTela && objTela.Length >= 2)
+            {
+                colaborador.Cpf = objTela[0] as string;
+                colaborador.Senha = objTela[1] as string;
+            }
+            else
+            {
+                throw new Exception("CPF/Senha não informados.");
+            }
+
+            SelectedColaborador = _repository.ValidaLogin(colaborador);
+
+            if (SelectedColaborador != null)
+            {
+                LoginSucceeded?.Invoke(this, EventArgs.Empty);
+            }
+            else
+            {
+                throw new Exception("Login inválido.");
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error: " + ex.Message);
         }
     }
 }

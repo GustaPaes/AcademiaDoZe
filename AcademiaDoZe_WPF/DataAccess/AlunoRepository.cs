@@ -23,7 +23,7 @@ public class AlunoRepository
         using var comando = factory.CreateCommand(); //Cria comando
         comando!.Connection = conexao; //Atribui conexão
         conexao.Open();
-        comando.CommandText = @"SELECT id_aluno, cpf, telefone, nome, nascimento, email, logradouro_id, numero, complemento, senha FROM tb_aluno;";
+        comando.CommandText = @"SELECT id_aluno, cpf, telefone, nome, nascimento, email, logradouro_id, numero, complemento, senha, foto FROM tb_aluno;";
         using var reader = comando.ExecuteReader();
         // carrega os dados para ser retornado e utilizado no databinding
         List<Aluno> dadosRetorno = new List<Aluno>();
@@ -40,7 +40,8 @@ public class AlunoRepository
                 LogradouroId = reader.GetInt32(6),
                 Numero = reader.GetString(7),
                 Complemento = reader.GetString(8),
-                Senha = reader.GetString(9)
+                Senha = reader.GetString(9),
+                Foto = reader.IsDBNull(10) ? null : (byte[])reader[10]
             });
         }
         return dadosRetorno;
@@ -63,10 +64,12 @@ public class AlunoRepository
         var numero = comando.CreateParameter(); numero.ParameterName = "@numero"; numero.Value = dado.Numero; comando.Parameters.Add(numero);
         var complemento = comando.CreateParameter(); complemento.ParameterName = "@complemento"; complemento.Value = dado.Complemento; comando.Parameters.Add(complemento);
         var senha = comando.CreateParameter(); senha.ParameterName = "@senha"; senha.Value = ""; comando.Parameters.Add(senha);
+        var foto = comando.CreateParameter(); foto.ParameterName = "@foto"; foto.Value = dado.Foto; comando.Parameters.Add(foto);
         conexao.Open();
-        comando.CommandText = @"INSERT INTO tb_aluno (cpf, telefone, nome, nascimento, email, logradouro_id, numero, complemento, senha) VALUES (@cpf, @telefone, @nome,
-                              @nascimento, @email, @logradouro_id, @numero, @complemento, @senha);";
-        
+        comando.CommandText = @"
+                INSERT INTO tb_aluno (cpf, telefone, nome, nascimento, email, logradouro_id, numero, complemento, senha, foto) 
+                              VALUES (@cpf, @telefone, @nome, @nascimento, @email, @logradouro_id, @numero, @complemento, @senha, @foto);";
+
         //Executa o script na conexão e armazena o número de linhas afetadas.
         var linhas = comando.ExecuteNonQuery();
     }
@@ -90,11 +93,13 @@ public class AlunoRepository
         var complemento = comando.CreateParameter(); complemento.ParameterName = "@complemento"; complemento.Value = dado.Complemento; comando.Parameters.Add(complemento);
         var senha = comando.CreateParameter(); senha.ParameterName = "@senha"; senha.Value = dado.Senha; comando.Parameters.Add(senha);
         conexao.Open();
-        
+
         //realiza o UPDATE
-        comando.CommandText = @"UPDATE tb_aluno SET cpf = @cpf, telefone = @telefone, nome = @nome, nascimento = @nascimento, email = @email, logradouro_id = @logradouro_id,
-                                numero = @numero, complemento = @complemento, senha = @senha WHERE id_aluno = @id;";
-        
+        comando.CommandText = @"
+                UPDATE tb_aluno 
+                SET cpf = @cpf, telefone = @telefone, nome = @nome, nascimento = @nascimento, email = @email, logradouro_id = @logradouro_id, numero = @numero, complemento = @complemento, foto = @foto
+                WHERE id_aluno = @id;";
+
         //executa o comando no banco de dados
         _ = comando.ExecuteNonQuery();
     }

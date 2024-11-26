@@ -36,7 +36,7 @@ namespace AcademiaDoZe_WPF.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AcademiaDoZe_WPF.Properties.Idioma - Cópia", typeof(Idioma_en_US).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AcademiaDoZe_WPF.Properties.Idioma.en-US", typeof(Idioma_en_US).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

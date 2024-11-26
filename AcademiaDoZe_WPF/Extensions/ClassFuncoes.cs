@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace AcademiaDoZe_WPF;
+namespace AcademiaDoZe_WPF.Extensions;
 
 class ClassFuncoes
 {
@@ -48,7 +48,7 @@ class ClassFuncoes
         // ? indica que o valor pode ser nulo
         string? auxIdiomaRegiao = ConfigurationManager.AppSettings.Get("IdiomaRegiao");
         // no ternário estamos tratando para isso não acontecer
-        string idiomaRegiao = (auxIdiomaRegiao is not null) ? auxIdiomaRegiao : "";
+        string idiomaRegiao = auxIdiomaRegiao is not null ? auxIdiomaRegiao : "";
         // Definir a cultura e ajusta o idioma/região
         // o operador ! (null-forgiving) afirma que o valor já foi tratado e não será nulo aqui
         CultureInfo culture = new(idiomaRegiao!);
@@ -155,5 +155,13 @@ class ClassFuncoes
             auxConfig.ShowDialog();
             ValidaConexaoDB();
         }
+    }
+
+    public static string Sha256Hash(string senha)
+    {
+        using var sha256 = System.Security.Cryptography.SHA256.Create();
+        byte[] bytes =
+        sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(senha));
+        return Convert.ToBase64String(bytes);
     }
 }
