@@ -56,17 +56,20 @@ namespace AcademiaDoZe_WPF.View
 
         private void SenhaBtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new SenhaPag());
+            WindowSenha windowSenha = new();
+            windowSenha.ShowDialog();
         }
 
         private void Matriculabtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new MatriculaPag());
+            if (mainFrame.Content is not PageListaMatricula)
+                mainFrame.Navigate(new PageListaMatricula());
         }
 
         private void AvaliacaoBtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new AvaliacoesPag());
+            if (mainFrame.Content is not PageAvaliacao)
+                mainFrame.Content = new PageAvaliacao();
         }
 
         private void FrequenciaBtn_Click(object sender, RoutedEventArgs e)

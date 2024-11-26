@@ -102,8 +102,8 @@ public class MatriculaCadastroViewModel : AlunoViewModel
         SelectedAluno = Alunos.FirstOrDefault(a => a.Id == _matricula.AlunoId);
         ColaboradoresViewModel.SelectedColaborador = ColaboradoresViewModel.Colaboradores.FirstOrDefault(c => c.Id == _matricula.ColaboradorId);
 
-        _matricula.AlunoId = SelectedAluno.Id;
-        _matricula.ColaboradorId = ColaboradoresViewModel.SelectedColaborador.Id;
+        _matricula.AlunoId = SelectedAluno?.Id ?? throw new Exception("Aluno invalido");
+        _matricula.ColaboradorId = ColaboradoresViewModel.SelectedColaborador?.Id ?? throw new Exception("Colaborador invalido");
 
         return _matricula;
     }

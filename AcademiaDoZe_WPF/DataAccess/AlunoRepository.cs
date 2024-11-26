@@ -92,6 +92,7 @@ public class AlunoRepository
         var numero = comando.CreateParameter(); numero.ParameterName = "@numero"; numero.Value = dado.Numero; comando.Parameters.Add(numero);
         var complemento = comando.CreateParameter(); complemento.ParameterName = "@complemento"; complemento.Value = dado.Complemento; comando.Parameters.Add(complemento);
         var senha = comando.CreateParameter(); senha.ParameterName = "@senha"; senha.Value = dado.Senha; comando.Parameters.Add(senha);
+        var foto = comando.CreateParameter(); foto.ParameterName = "@foto"; foto.Value = dado.Foto; comando.Parameters.Add(foto);
         conexao.Open();
 
         //realiza o UPDATE
