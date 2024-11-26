@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace AcademiaDoZe_WPF.Extensions;
 
-public enum PlanoMatricula
+public enum PlanoMatriculaEnum
 {
     [Description("Mensal")]
     Mensal = '1',
@@ -15,7 +15,7 @@ public enum PlanoMatricula
     Anual = '4'
 }
 
-public enum RestricaoMedica
+public enum RestricaoMedicaEnum
 {
     [Description("Nenhum")]
     Nenhum = '1',
@@ -41,7 +41,7 @@ public enum RestricaoMedica
     Outras = 'B'
 }
 
-public enum EnumColaboradorTipo
+public enum ColaboradorTipoEnum
 {
     [Description("Administrador")]
     Administrador = '1',
@@ -51,7 +51,7 @@ public enum EnumColaboradorTipo
     Instrutor = '3',
 }
 
-public enum EnumColaboradorVinculo
+public enum ColaboradorVinculoEnum
 {
     [Description("CLT")]
     Clt = '1',

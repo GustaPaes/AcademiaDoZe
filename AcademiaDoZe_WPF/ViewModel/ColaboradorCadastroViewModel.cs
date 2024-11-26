@@ -18,8 +18,8 @@ public class ColaboradorCadastroViewModel : LogradouroViewModel
     public string Complemento { get { return _colaborador.Complemento; } set { _colaborador.Complemento = value; OnPropertyChanged("Complemento"); } }
     public string Senha { get { return _colaborador.Senha; } set { _colaborador.Senha = value; OnPropertyChanged("Senha"); } }
     public DateTime Admissao { get { return _colaborador.Admissao; } set { _colaborador.Admissao = value; OnPropertyChanged("Admissao"); } }
-    public EnumColaboradorTipo Tipo { get { return _colaborador.Tipo; } set { _colaborador.Tipo = value; OnPropertyChanged("Tipo"); } }
-    public EnumColaboradorVinculo Vinculo { get { return _colaborador.Vinculo; } set { _colaborador.Vinculo = value; OnPropertyChanged("Vinculo"); } }
+    public ColaboradorTipoEnum Tipo { get { return _colaborador.Tipo; } set { _colaborador.Tipo = value; OnPropertyChanged("Tipo"); } }
+    public ColaboradorVinculoEnum Vinculo { get { return _colaborador.Vinculo; } set { _colaborador.Vinculo = value; OnPropertyChanged("Vinculo"); } }
     public ICommand SalvarColaboradorCommand { get; set; }
     public event EventHandler ColaboradorSalvo;
 

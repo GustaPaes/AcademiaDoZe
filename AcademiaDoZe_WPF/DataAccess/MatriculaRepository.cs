@@ -38,11 +38,11 @@ public class MatriculaRepository
                 Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
                 AlunoId = reader.IsDBNull(1) ? 0 : reader.GetInt32(1),
                 ColaboradorId = reader.IsDBNull(2) ? 0 : reader.GetInt32(2),
-                Plano = (PlanoMatricula)reader.GetString(3)[0],
+                Plano = (PlanoMatriculaEnum)reader.GetString(3)[0],
                 DataInicio = reader.GetDateTime(4),
                 DataFim = reader.GetDateTime(5),
                 Objetivo = reader.IsDBNull(6) ? null : reader.GetString(6),
-                RestricaoMedica = (RestricaoMedica)reader.GetString(7)[0],
+                RestricaoMedica = (RestricaoMedicaEnum)reader.GetString(7)[0],
                 ObsRestricao = reader.IsDBNull(8) ? null : reader.GetString(8),
                 LaudoMedico = reader.IsDBNull(9) ? null : (byte[])reader[9]
             });
@@ -91,7 +91,7 @@ public class MatriculaRepository
             if (idade < 16 && (dado.LaudoMedico == null || dado.LaudoMedico.Length == 0))
                 throw new Exception($"O aluno {alunoVerifica.Nome} é menor de 16 anos e deve fornecer um laudo médico.");
 
-            if (dado.RestricaoMedica != RestricaoMedica.Nenhum)
+            if (dado.RestricaoMedica != RestricaoMedicaEnum.Nenhum)
             {
                 if (dado.LaudoMedico == null || dado.LaudoMedico.Length == 0)
                     throw new Exception($"O aluno {alunoVerifica.Nome} possui uma restrição médica e deve fornecer um laudo médico para realizar atividades.");
@@ -137,7 +137,7 @@ public class MatriculaRepository
             if (idade < 16 && (dado.LaudoMedico == null || dado.LaudoMedico.Length == 0))
                 throw new Exception($"O aluno {alunoVerifica.Nome} é menor de 16 anos e deve fornecer um laudo médico.");
 
-            if (dado.RestricaoMedica != RestricaoMedica.Nenhum)
+            if (dado.RestricaoMedica != RestricaoMedicaEnum.Nenhum)
             {
                 if (dado.LaudoMedico == null || dado.LaudoMedico.Length == 0)
                     throw new Exception($"O aluno {alunoVerifica.Nome} possui uma restrição médica e deve fornecer um laudo médico para realizar atividades.");

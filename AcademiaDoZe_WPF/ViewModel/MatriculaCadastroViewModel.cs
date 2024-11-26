@@ -12,10 +12,10 @@ public class MatriculaCadastroViewModel : AlunoViewModel
     public int Id { get { return _matricula.Id; } set { _matricula.Id = value; OnPropertyChanged("Id"); } }
     public int AlunoId { get { return _matricula.AlunoId; } set { _matricula.AlunoId = value; OnPropertyChanged("AlunoId"); } }
     public int ColaboradorId { get { return _matricula.ColaboradorId; } set { _matricula.ColaboradorId = value; OnPropertyChanged("ColaboradorId"); } }
-    public PlanoMatricula Plano { get { return _matricula.Plano; } set { _matricula.Plano = value; OnPropertyChanged("Plano"); AtualizarDataFim(); } }
+    public PlanoMatriculaEnum Plano { get { return _matricula.Plano; } set { _matricula.Plano = value; OnPropertyChanged("Plano"); AtualizarDataFim(); } }
     public DateTime DataInicio { get { return _matricula.DataInicio; } set { _matricula.DataInicio = value; OnPropertyChanged("DataInicio"); AtualizarDataFim(); } }
     public DateTime DataFim { get { return _matricula.DataFim; } set { _matricula.DataFim = value; OnPropertyChanged("DataFim"); } }
-    public RestricaoMedica RestricaoMedica { get { return _matricula.RestricaoMedica; } set { _matricula.RestricaoMedica = value; OnPropertyChanged("RestricaoMedica"); } }
+    public RestricaoMedicaEnum RestricaoMedica { get { return _matricula.RestricaoMedica; } set { _matricula.RestricaoMedica = value; OnPropertyChanged("RestricaoMedica"); } }
     public string ObsRestricao { get { return _matricula.ObsRestricao; } set { _matricula.ObsRestricao = value; OnPropertyChanged("ObsRestricao"); } }
     public string Objetivo { get { return _matricula.Objetivo; } set { _matricula.Objetivo = value; OnPropertyChanged("Objetivo"); } }
     public byte[] LaudoMedico { get { return _matricula.LaudoMedico; } set { _matricula.LaudoMedico = value; OnPropertyChanged("LaudoMedico"); } }
@@ -70,16 +70,16 @@ public class MatriculaCadastroViewModel : AlunoViewModel
             int mesesDuracao = 0;
             switch (_matricula.Plano)
             {
-                case PlanoMatricula.Mensal:
+                case PlanoMatriculaEnum.Mensal:
                     mesesDuracao = 1;
                     break;
-                case PlanoMatricula.Trimestral:
+                case PlanoMatriculaEnum.Trimestral:
                     mesesDuracao = 3;
                     break;
-                case PlanoMatricula.Semestral:
+                case PlanoMatriculaEnum.Semestral:
                     mesesDuracao = 6;
                     break;
-                case PlanoMatricula.Anual:
+                case PlanoMatriculaEnum.Anual:
                     mesesDuracao = 12;
                     break;
             }

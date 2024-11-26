@@ -2,6 +2,7 @@
 using AcademiaDoZe_WPF.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace AcademiaDoZe_WPF.View
 {
@@ -20,33 +21,25 @@ namespace AcademiaDoZe_WPF.View
             this.PreviewKeyDown += new System.Windows.Input.KeyEventHandler(ClassFuncoes.Window_KeyDown);
             this.Loaded += Page_Loaded;
 
-            ComboBoxRestricao.ItemsSource = Enum.GetValues(typeof(RestricaoMedica));
-            ComboBoxPlano.ItemsSource = Enum.GetValues(typeof(PlanoMatricula));
+            ComboBoxRestricao.ItemsSource = Enum.GetValues(typeof(RestricaoMedicaEnum));
+            ComboBoxPlano.ItemsSource = Enum.GetValues(typeof(PlanoMatriculaEnum));
 
             DataContext = new MatriculaCadastroViewModel();
         }
 
-        private void Box_GotFocus(object sender, System.Windows.RoutedEventArgs e)
+        private void Box_GotFocus(object sender, RoutedEventArgs e)
         {
             if (sender is TextBox textBox)
-            {
-                textBox.Background = System.Windows.Media.Brushes.LightCyan;
-            }
+                textBox.Background = Brushes.LightCyan;
             else if (sender is PasswordBox passwordBox)
-            {
-                passwordBox.Background = System.Windows.Media.Brushes.LightCyan;
-            }
+                passwordBox.Background = Brushes.LightCyan;
         }
-        private void Box_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        private void Box_LostFocus(object sender, RoutedEventArgs e)
         {
             if (sender is TextBox textBox)
-            {
-                textBox.Background = System.Windows.Media.Brushes.White;
-            }
+                textBox.Background = Brushes.White;
             else if (sender is PasswordBox passwordBox)
-            {
-                passwordBox.Background = System.Windows.Media.Brushes.White;
-            }
+                passwordBox.Background = Brushes.White;
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {

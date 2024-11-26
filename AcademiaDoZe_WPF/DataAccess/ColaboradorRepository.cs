@@ -47,8 +47,8 @@ public class ColaboradorRepository
                 Complemento = reader.GetString(8),
                 Senha = reader.GetString(9),
                 Admissao = reader.GetDateTime(10),
-                Tipo = (EnumColaboradorTipo)reader.GetString(11)[0],
-                Vinculo = (EnumColaboradorVinculo)reader.GetString(12)[0]
+                Tipo = (ColaboradorTipoEnum)reader.GetString(11)[0],
+                Vinculo = (ColaboradorVinculoEnum)reader.GetString(12)[0]
             });
         }
         return dadosRetorno;
@@ -172,8 +172,8 @@ public class ColaboradorRepository
                 Complemento = reader.GetString(8),
                 Senha = reader.GetString(9),
                 Admissao = reader.GetDateTime(10),
-                Tipo = (EnumColaboradorTipo)reader.GetString(11)[0],
-                Vinculo = (EnumColaboradorVinculo)reader.GetString(12)[0]
+                Tipo = (ColaboradorTipoEnum)reader.GetString(11)[0],
+                Vinculo = (ColaboradorVinculoEnum)reader.GetString(12)[0]
             };
         }
         return dadosRetorno;

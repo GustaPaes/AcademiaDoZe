@@ -15,8 +15,8 @@ public class Colaborador
     public string Complemento { get; set; }
     public string Senha { get; set; }
     public DateTime Admissao { get; set; }
-    public EnumColaboradorTipo Tipo { get; set; }
-    public EnumColaboradorVinculo Vinculo { get; set; }
+    public ColaboradorTipoEnum Tipo { get; set; }
+    public ColaboradorVinculoEnum Vinculo { get; set; }
 
     public Colaborador()
     {

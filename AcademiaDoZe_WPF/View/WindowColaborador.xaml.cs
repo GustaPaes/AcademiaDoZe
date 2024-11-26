@@ -16,8 +16,8 @@ namespace AcademiaDoZe_WPF.View
             this.PreviewKeyDown += new System.Windows.Input.KeyEventHandler(ClassFuncoes.Window_KeyDown);
             this.Loaded += Page_Loaded;
 
-            ComboBoxTipo.ItemsSource = Enum.GetValues(typeof(EnumColaboradorTipo));
-            ComboBoxVinculo.ItemsSource = Enum.GetValues(typeof(EnumColaboradorVinculo));
+            ComboBoxTipo.ItemsSource = Enum.GetValues(typeof(ColaboradorTipoEnum));
+            ComboBoxVinculo.ItemsSource = Enum.GetValues(typeof(ColaboradorVinculoEnum));
 
             DataContext = new ColaboradorCadastroViewModel();
         }
